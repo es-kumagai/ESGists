@@ -147,6 +147,7 @@
 		B109443D1B6EC61900FABE17 /* ListUsersGistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUsersGistsViewController.swift; sourceTree = "<group>"; };
 		B10944401B6EC8B000FABE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B152E2861B6EC9D4008B485A /* SampleAccount.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SampleAccount.plist; path = Private/SampleAccount.plist; sourceTree = "<group>"; };
+		B152E2881B6ECBE2008B485A /* ESGists.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ESGists.podspec; sourceTree = "<group>"; };
 		B24C9949C290A58CD3EE38D4 /* Pods-ESGists_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_iOS/Pods-ESGists_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B65C47A0DE2C0E505D4204F4 /* Pods_ESGistsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESGistsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B897F98282BC811B427EEF3C /* Pods-ESGists_OSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_OSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_OSXTests/Pods-ESGists_OSXTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				B10943E91B6EC45100FABE17 /* Podfile */,
+				B152E2881B6ECBE2008B485A /* ESGists.podspec */,
 				B10943EA1B6EC4B900FABE17 /* Private */,
 				B10943751B6EC37A00FABE17 /* ESGists */,
 				B10943931B6EC39A00FABE17 /* ESGists_OSX */,
