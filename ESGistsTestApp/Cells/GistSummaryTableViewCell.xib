@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="61" id="N2e-9q-2Jn" customClass="GistSummaryTableViewCell" customModule="ESGistTestApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N2e-9q-2Jn" id="WPd-j6-Efy">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nO-5X-MeO">
+                        <rect key="frame" x="8" y="8" width="271" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timestamp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-Pe-SeJ">
+                        <rect key="frame" x="198" y="31" width="81" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.75782395010000003" green="0.80293204939999996" blue="0.967972736" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0nO-5X-MeO" firstAttribute="top" secondItem="WPd-j6-Efy" secondAttribute="topMargin" id="BGp-rw-gNK"/>
+                    <constraint firstItem="qQ0-Pe-SeJ" firstAttribute="top" secondItem="0nO-5X-MeO" secondAttribute="bottom" constant="2" id="S9H-qO-zhI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0nO-5X-MeO" secondAttribute="trailing" id="SGx-aK-PmK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qQ0-Pe-SeJ" secondAttribute="bottom" id="SoG-eR-GK8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qQ0-Pe-SeJ" secondAttribute="trailing" id="eP7-KZ-mLV"/>
+                    <constraint firstItem="0nO-5X-MeO" firstAttribute="leading" secondItem="WPd-j6-Efy" secondAttribute="leadingMargin" id="tg0-Yf-FbJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="0nO-5X-MeO" id="TOg-yp-uNK"/>
+                <outlet property="timestampLabel" destination="qQ0-Pe-SeJ" id="Zza-ri-bfY"/>
+            </connections>
+            <point key="canvasLocation" x="269" y="130.5"/>
+        </tableViewCell>
+    </objects>
+</document>

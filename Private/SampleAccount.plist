@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>id</key>
+	<string>EZ-NET</string>
+	<key>password</key>
+	<string>ezgh0807os</string>
+	<key>client_id</key>
+	<string>72c1247cc4a7bac7e54b</string>
+	<key>client_secret</key>
+	<string>aa61b58f3092932a01f5433ec08b5aa8f0da356c</string>
+</dict>
+</plist>
