@@ -1,15 +1,15 @@
 //
-//  ESGistsTests.swift
-//  ESGistsTests
+//  ESGists_OSXTests.swift
+//  ESGists_OSXTests
 //
 //  Created by Tomohiro Kumagai on H27/08/03.
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
 import XCTest
-@testable import ESGists
+@testable import ESGists_OSX
 
-class ESGistsTests: XCTestCase {
+class ESGists_OSXTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
