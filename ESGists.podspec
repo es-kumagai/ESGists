@@ -27,8 +27,8 @@ Pod::Spec.new do |s|
   s.dependency  'ESCoreGraphicsExtension', '~> 0.1.2'
   s.dependency  'ESNotification', '~> 0.1.0'
 
-  s.dependency  'APIKit', :git => 'https://github.com/ishkawa/APIKit.git', :branch => 'master'
-  s.dependency  'Himotoki', :git => 'https://github.com/ikesyo/Himotoki.git', :branch => 'swift2'
+  s.dependency  'APIKit'
+  s.dependency  'Himotoki'
 
   s.osx.dependency  'ESAppKitExtension', '~> 0.1.1'
 
