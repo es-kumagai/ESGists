@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/EZ-NET/ESGists"
 
-  s.license      = { :type => "MIT", :text => 'Copyright (c) Tomohiro Kumagai' }
+  s.license      = { :type => "MIT", :file => 'LICENSE' }
 
   s.author             = { "Tomohiro Kumagai" => "http://ez-net.jp/profile/" }
   s.social_media_url   = "http://twitter.com/es_kumagai"
