@@ -25,6 +25,16 @@ extension LanguageType {
 		
 		return self.description.hashValue
 	}
+	
+	public init?(displayText:String) {
+		
+		guard let found = Self.all.findElement({ $0.description == displayText }) else {
+			
+			return nil
+		}
+		
+		self = found.element
+	}
 }
 
 extension SequenceType where Generator.Element : LanguageType {

@@ -113,4 +113,27 @@ class LanguageTests: XCTestCase {
 		expected().equal(sortedLanguages, LanguageTests.allSortedLanguages)
 		expected().equal(sortedPopulars, LanguageTests.allSortedPopulars)
     }
+	
+	func testMakeFromDisplayText() {
+		
+		let lang1 = Language(displayText: "C++")
+		let lang2 = Language(displayText: "Ruby")
+		let lang3 = Language(displayText: "Awk")
+		let lang4 = Language(displayText: "MSX-BASIC")
+		
+		let plang1 = PopularLanguage(displayText: "C++")
+		let plang2 = PopularLanguage(displayText: "Ruby")
+		let plang3 = PopularLanguage(displayText: "Awk")
+		let plang4 = PopularLanguage(displayText: "MSX-BASIC")
+		
+		expected().equal(lang1!, Language.CPlusPlus)
+		expected().equal(lang2!, Language.Ruby)
+		expected().equal(lang3!, Language.Awk)
+		expected().success(lang4 == nil)
+		
+		expected().equal(plang1!, PopularLanguage.CPlusPlus)
+		expected().equal(plang2!, PopularLanguage.Ruby)
+		expected().success(plang3 == nil)
+		expected().success(plang4 == nil)
+	}
 }
