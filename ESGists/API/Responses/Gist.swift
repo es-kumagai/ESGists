@@ -40,7 +40,7 @@ extension Gist {
 		public var rawUrl:URL
 		public var type:String
 		public var truncated:Bool
-		public var language:String
+		public var language:Language?
 	}
 	
 	public struct CommentStatus {
@@ -86,7 +86,7 @@ extension Gist.GistFileInfo : Decodable {
 			e <| "raw_url",
 			e <| "type",
 			e <| "truncated",
-			e <| "language"
+			e <|? "language"
 		
 		).map(Gist.GistFileInfo.init)
 	}

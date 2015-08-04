@@ -67,6 +67,8 @@
 		B109443E1B6EC61900FABE17 /* ListGists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B109443C1B6EC61900FABE17 /* ListGists.storyboard */; };
 		B109443F1B6EC61900FABE17 /* ListUsersGistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B109443D1B6EC61900FABE17 /* ListUsersGistsViewController.swift */; };
 		B10944411B6EC8B000FABE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10944401B6EC8B000FABE17 /* Main.storyboard */; };
+		B13C98CD1B70651900A5A2B3 /* PopularLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */; };
+		B13C98CE1B70651900A5A2B3 /* PopularLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */; };
 		B152E2871B6EC9D4008B485A /* SampleAccount.plist in Resources */ = {isa = PBXBuildFile; fileRef = B152E2861B6EC9D4008B485A /* SampleAccount.plist */; };
 		ECE61BEC47B158DCBD14F363 /* Pods_ESGists_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5817DF71CE6EA2EE1791E02D /* Pods_ESGists_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -146,6 +148,7 @@
 		B109443C1B6EC61900FABE17 /* ListGists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListGists.storyboard; sourceTree = "<group>"; };
 		B109443D1B6EC61900FABE17 /* ListUsersGistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUsersGistsViewController.swift; sourceTree = "<group>"; };
 		B10944401B6EC8B000FABE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularLanguage.swift; sourceTree = "<group>"; };
 		B152E2861B6EC9D4008B485A /* SampleAccount.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SampleAccount.plist; path = Private/SampleAccount.plist; sourceTree = "<group>"; };
 		B152E2881B6ECBE2008B485A /* ESGists.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ESGists.podspec; sourceTree = "<group>"; };
 		B24C9949C290A58CD3EE38D4 /* Pods-ESGists_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_iOS/Pods-ESGists_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -372,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				B10944051B6EC53000FABE17 /* Language.swift */,
+				B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -853,6 +857,7 @@
 				B10944241B6EC53000FABE17 /* User.swift in Sources */,
 				B109440A1B6EC53000FABE17 /* GitHubAPI.swift in Sources */,
 				B10944221B6EC53000FABE17 /* URL.swift in Sources */,
+				B13C98CD1B70651900A5A2B3 /* PopularLanguage.swift in Sources */,
 				B10944141B6EC53000FABE17 /* Date.swift in Sources */,
 				B10944261B6EC53000FABE17 /* Language.swift in Sources */,
 				B109441E1B6EC53000FABE17 /* OAuthAppInfo.swift in Sources */,
@@ -885,6 +890,7 @@
 				B10944251B6EC53000FABE17 /* User.swift in Sources */,
 				B109440B1B6EC53000FABE17 /* GitHubAPI.swift in Sources */,
 				B10944231B6EC53000FABE17 /* URL.swift in Sources */,
+				B13C98CE1B70651900A5A2B3 /* PopularLanguage.swift in Sources */,
 				B10944151B6EC53000FABE17 /* Date.swift in Sources */,
 				B10944271B6EC53000FABE17 /* Language.swift in Sources */,
 				B109441F1B6EC53000FABE17 /* OAuthAppInfo.swift in Sources */,

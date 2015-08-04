@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ESGists_OSX
+@testable import ESGists
 
 class ESGists_OSXTests: XCTestCase {
     

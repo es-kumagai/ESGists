@@ -6,6 +6,21 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
+import Himotoki
+
+public protocol LanguageType : RawRepresentable, CustomStringConvertible {
+	
+	var extname:String { get }
+}
+
+extension LanguageType {
+	
+	public var description:RawValue {
+		
+		return self.rawValue
+	}
+}
+
 public enum Language : String {
 	
 	case ActionScript
@@ -33,6 +48,7 @@ public enum Language : String {
 	case Swift
 	case TeX
 	case VimL
+
 	case ABAP
 	case Ada
 	case Agda
@@ -355,15 +371,7 @@ public enum Language : String {
 //	case Zimpl
 }
 
-extension Language : CustomStringConvertible {
-	
-	public var description:String {
-		
-		return self.rawValue
-	}
-}
-
-extension Language {
+extension Language : LanguageType {
 	
 	public var extname:String {
 		
@@ -837,5 +845,13 @@ extension Language {
 //		case Zephir
 //		case Zimpl
 		}
+	}
+}
+
+extension Language : Decodable {
+	
+	public static func decode(e: Extractor) -> Language? {
+		
+		return String.decode(e).flatMap(Language.init)
 	}
 }
