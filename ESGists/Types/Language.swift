@@ -8,18 +8,7 @@
 
 import Himotoki
 
-public protocol LanguageType : RawRepresentable, CustomStringConvertible {
-	
-	var extname:String { get }
-}
-
-extension LanguageType {
-	
-	public var description:RawValue {
-		
-		return self.rawValue
-	}
-}
+private let _all:Set<Language> = _getAllLanguage()
 
 public enum Language : String {
 	
@@ -372,6 +361,21 @@ public enum Language : String {
 }
 
 extension Language : LanguageType {
+	
+	public init<T:LanguageType>(_ value:T) {
+	
+		self = value.language
+	}
+	
+	public static var all:Set<Language> {
+	
+		return _all
+	}
+	
+	public var language:Language {
+	
+		return self
+	}
 	
 	public var extname:String {
 		
@@ -855,3 +859,4 @@ extension Language : Decodable {
 		return String.decode(e).flatMap(Language.init)
 	}
 }
+

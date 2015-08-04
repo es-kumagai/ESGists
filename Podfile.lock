@@ -13,7 +13,7 @@ PODS:
   - ESThread (0.1.0)
   - Himotoki (0.5.1)
   - Result (0.6-beta.1)
-  - Swim (1.3.14)
+  - Swim (1.3.16-beta)
 
 DEPENDENCIES:
   - APIKit (from `https://github.com/ishkawa/APIKit.git`, branch `master`)
@@ -24,7 +24,7 @@ DEPENDENCIES:
   - ESTestKit
   - ESThread (~> 0.1.0)
   - Himotoki (from `https://github.com/ikesyo/Himotoki.git`, branch `swift2`)
-  - Swim (~> 1.3.14)
+  - Swim (from `https://github.com/EZ-NET/ESSwim`, branch `beta`)
 
 EXTERNAL SOURCES:
   APIKit:
@@ -33,6 +33,9 @@ EXTERNAL SOURCES:
   Himotoki:
     :branch: swift2
     :git: https://github.com/ikesyo/Himotoki.git
+  Swim:
+    :branch: beta
+    :git: https://github.com/EZ-NET/ESSwim
 
 CHECKOUT OPTIONS:
   APIKit:
@@ -41,6 +44,9 @@ CHECKOUT OPTIONS:
   Himotoki:
     :commit: 2fddd0773f314e6d42d8748048e248c1054d90d6
     :git: https://github.com/ikesyo/Himotoki.git
+  Swim:
+    :commit: 14815fbe6b5850bd61eec698e59d2764227e3173
+    :git: https://github.com/EZ-NET/ESSwim
 
 SPEC CHECKSUMS:
   APIKit: cb0ce7ebc5e72d7ae4d71e0061f2f98676287c1f
@@ -52,6 +58,6 @@ SPEC CHECKSUMS:
   ESThread: aa7f1d3e412716cef6c62e116a1da761449f5e48
   Himotoki: 162194f50e4811b0695bb9e9a1bd4aebf703c82f
   Result: 6c990ec4a72470672f9fc5b6fef009da0f6f40d1
-  Swim: 9b5184815b6c50971ef0378156225c90fc8e50b5
+  Swim: 99963f44a655da68bbae3a556783be3b1dc4612a
 
 COCOAPODS: 0.38.2

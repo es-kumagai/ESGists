@@ -6,6 +6,8 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
+import Swim
+
 public enum PopularLanguage : String {
 	
 	case ActionScript
@@ -35,15 +37,30 @@ public enum PopularLanguage : String {
 	case VimL
 }
 
+private let _all:Set<PopularLanguage> = flatMap(Language.all, into: Set<PopularLanguage>.init) {
+ 
+	PopularLanguage(rawValue: $0.rawValue)
+}
+
 extension PopularLanguage : LanguageType {
+	
+	public static var all:Set<PopularLanguage> {
+	
+		return _all
+	}
 	
 	public var extname:String {
 	
+		return self.language.extname
+	}
+	
+	public var language:Language {
+		
 		guard let language = Language(rawValue: self.rawValue) else {
 			
-			fatalError("Unknown language.")
+			fatalError("PopularLanguage must be a subset of Language.")
 		}
 		
-		return language.extname
+		return language
 	}
 }

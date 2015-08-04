@@ -69,6 +69,12 @@
 		B10944411B6EC8B000FABE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10944401B6EC8B000FABE17 /* Main.storyboard */; };
 		B13C98CD1B70651900A5A2B3 /* PopularLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */; };
 		B13C98CE1B70651900A5A2B3 /* PopularLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */; };
+		B13C98D51B70734500A5A2B3 /* LanguageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98D41B70734500A5A2B3 /* LanguageSet.swift */; };
+		B13C98D61B70734500A5A2B3 /* LanguageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98D41B70734500A5A2B3 /* LanguageSet.swift */; };
+		B13C98D81B70854400A5A2B3 /* LanguageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98D71B70854400A5A2B3 /* LanguageTests.swift */; };
+		B13C98D91B70854800A5A2B3 /* LanguageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98D71B70854400A5A2B3 /* LanguageTests.swift */; };
+		B13C98DB1B7088E700A5A2B3 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */; };
+		B13C98DC1B7088E700A5A2B3 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */; };
 		B152E2871B6EC9D4008B485A /* SampleAccount.plist in Resources */ = {isa = PBXBuildFile; fileRef = B152E2861B6EC9D4008B485A /* SampleAccount.plist */; };
 		ECE61BEC47B158DCBD14F363 /* Pods_ESGists_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5817DF71CE6EA2EE1791E02D /* Pods_ESGists_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -149,6 +155,9 @@
 		B109443D1B6EC61900FABE17 /* ListUsersGistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUsersGistsViewController.swift; sourceTree = "<group>"; };
 		B10944401B6EC8B000FABE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularLanguage.swift; sourceTree = "<group>"; };
+		B13C98D41B70734500A5A2B3 /* LanguageSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSet.swift; sourceTree = "<group>"; };
+		B13C98D71B70854400A5A2B3 /* LanguageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTests.swift; sourceTree = "<group>"; };
+		B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageType.swift; sourceTree = "<group>"; };
 		B152E2861B6EC9D4008B485A /* SampleAccount.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SampleAccount.plist; path = Private/SampleAccount.plist; sourceTree = "<group>"; };
 		B152E2881B6ECBE2008B485A /* ESGists.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ESGists.podspec; sourceTree = "<group>"; };
 		B24C9949C290A58CD3EE38D4 /* Pods-ESGists_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_iOS/Pods-ESGists_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +269,7 @@
 		B10943811B6EC37A00FABE17 /* ESGistsTests */ = {
 			isa = PBXGroup;
 			children = (
+				B13C98D71B70854400A5A2B3 /* LanguageTests.swift */,
 			);
 			path = ESGistsTests;
 			sourceTree = "<group>";
@@ -374,8 +384,10 @@
 		B10944041B6EC53000FABE17 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */,
 				B10944051B6EC53000FABE17 /* Language.swift */,
 				B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */,
+				B13C98D41B70734500A5A2B3 /* LanguageSet.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -853,6 +865,7 @@
 				B109440C1B6EC53000FABE17 /* JSONObject.swift in Sources */,
 				B10944061B6EC53000FABE17 /* AuthorizationsAPI.swift in Sources */,
 				B109441A1B6EC53000FABE17 /* GistHistory.swift in Sources */,
+				B13C98DB1B7088E700A5A2B3 /* LanguageType.swift in Sources */,
 				B10944161B6EC53000FABE17 /* Gist.swift in Sources */,
 				B10944241B6EC53000FABE17 /* User.swift in Sources */,
 				B109440A1B6EC53000FABE17 /* GitHubAPI.swift in Sources */,
@@ -866,6 +879,7 @@
 				B10944101B6EC53000FABE17 /* Scope.swift in Sources */,
 				B109441C1B6EC53000FABE17 /* ID.swift in Sources */,
 				B10944121B6EC53000FABE17 /* AuthorizationResponse.swift in Sources */,
+				B13C98D51B70734500A5A2B3 /* LanguageSet.swift in Sources */,
 				B109440E1B6EC53000FABE17 /* RequestFile.swift in Sources */,
 				B10944181B6EC53000FABE17 /* GistCreated.swift in Sources */,
 			);
@@ -876,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10943A11B6EC39A00FABE17 /* ESGists_OSXTests.swift in Sources */,
+				B13C98D81B70854400A5A2B3 /* LanguageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +901,7 @@
 				B109440D1B6EC53000FABE17 /* JSONObject.swift in Sources */,
 				B10944071B6EC53000FABE17 /* AuthorizationsAPI.swift in Sources */,
 				B109441B1B6EC53000FABE17 /* GistHistory.swift in Sources */,
+				B13C98DC1B7088E700A5A2B3 /* LanguageType.swift in Sources */,
 				B10944171B6EC53000FABE17 /* Gist.swift in Sources */,
 				B10944251B6EC53000FABE17 /* User.swift in Sources */,
 				B109440B1B6EC53000FABE17 /* GitHubAPI.swift in Sources */,
@@ -899,6 +915,7 @@
 				B10944111B6EC53000FABE17 /* Scope.swift in Sources */,
 				B109441D1B6EC53000FABE17 /* ID.swift in Sources */,
 				B10944131B6EC53000FABE17 /* AuthorizationResponse.swift in Sources */,
+				B13C98D61B70734500A5A2B3 /* LanguageSet.swift in Sources */,
 				B109440F1B6EC53000FABE17 /* RequestFile.swift in Sources */,
 				B10944191B6EC53000FABE17 /* GistCreated.swift in Sources */,
 			);
@@ -909,6 +926,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10943BD1B6EC3AA00FABE17 /* ESGists_iOSTests.swift in Sources */,
+				B13C98D91B70854800A5A2B3 /* LanguageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
