@@ -9,9 +9,21 @@ PODS:
   - ESNotification (0.1.0):
     - ESThread (~> 0.1.0)
     - Swim (~> 1.3.14)
+  - ESProgressHUD (0.1.2):
+    - ESActiveCounter (~> 0.1.3)
+    - ESAppKitExtension (~> 0.1.1)
+    - ESCoreGraphicsExtension (~> 0.1.2)
   - ESTestKit (0.3.2)
   - ESThread (0.1.0)
   - Himotoki (0.5.1)
+  - Ocean (1.3.14-beta):
+    - ESActiveCounter (~> 0.1.0)
+    - ESAppKitExtension (~> 0.1.1)
+    - ESCoreGraphicsExtension (~> 0.1.2)
+    - ESNotification (~> 0.1.0)
+    - ESProgressHUD (~> 0.1.2)
+    - ESThread (~> 0.1.0)
+    - Swim (~> 1.3.14)
   - Result (0.6-beta.1)
   - Swim (1.3.16-beta)
 
@@ -24,6 +36,7 @@ DEPENDENCIES:
   - ESTestKit
   - ESThread (~> 0.1.0)
   - Himotoki (from `https://github.com/ikesyo/Himotoki.git`, branch `swift2`)
+  - Ocean (from `https://github.com/EZ-NET/ESOcean`, branch `Swift2`)
   - Swim (from `https://github.com/EZ-NET/ESSwim`, branch `beta`)
 
 EXTERNAL SOURCES:
@@ -33,6 +46,9 @@ EXTERNAL SOURCES:
   Himotoki:
     :branch: swift2
     :git: https://github.com/ikesyo/Himotoki.git
+  Ocean:
+    :branch: Swift2
+    :git: https://github.com/EZ-NET/ESOcean
   Swim:
     :branch: beta
     :git: https://github.com/EZ-NET/ESSwim
@@ -44,8 +60,11 @@ CHECKOUT OPTIONS:
   Himotoki:
     :commit: 2fddd0773f314e6d42d8748048e248c1054d90d6
     :git: https://github.com/ikesyo/Himotoki.git
+  Ocean:
+    :commit: a1cd264b4650be8582fa79aa9a3ba0387ffc63c0
+    :git: https://github.com/EZ-NET/ESOcean
   Swim:
-    :commit: 14815fbe6b5850bd61eec698e59d2764227e3173
+    :commit: dc8bbee99ab6f180b0f3efb91e60cc298e1b81e8
     :git: https://github.com/EZ-NET/ESSwim
 
 SPEC CHECKSUMS:
@@ -54,9 +73,11 @@ SPEC CHECKSUMS:
   ESAppKitExtension: 3bc92382a286d8ed531c0f2e9e1a0356cae9457c
   ESCoreGraphicsExtension: 017d11d2debc6c0adc618d6f27eaeac6ee393732
   ESNotification: e8386670345eccf6d4b865f3843159cf38f4d3f9
+  ESProgressHUD: 1ce6537e3813cd96d8fb81ae34d859cd5bd2fad2
   ESTestKit: 162f7c3973be319b6ec3033cc884d0609030d458
   ESThread: aa7f1d3e412716cef6c62e116a1da761449f5e48
   Himotoki: 162194f50e4811b0695bb9e9a1bd4aebf703c82f
+  Ocean: bc65cf62002f89a2b4046aebc90fab667ea0b96c
   Result: 6c990ec4a72470672f9fc5b6fef009da0f6f40d1
   Swim: 99963f44a655da68bbae3a556783be3b1dc4612a
 

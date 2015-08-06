@@ -8,6 +8,7 @@ def pods
 	pod 'APIKit', :git => 'https://github.com/ishkawa/APIKit.git', :branch => 'master'
 	pod 'Himotoki', :git => 'https://github.com/ikesyo/Himotoki.git', :branch => 'swift2'
 	pod 'Swim', :git => 'https://github.com/EZ-NET/ESSwim', :branch => 'beta'
+	pod 'Ocean', :git => 'https://github.com/EZ-NET/ESOcean', :branch => 'Swift2'
 	pod 'ESThread', '~> 0.1.0'
 	pod 'ESActiveCounter', '~> 0.1.3'
 	pod 'ESCoreGraphicsExtension', '~> 0.1.2'

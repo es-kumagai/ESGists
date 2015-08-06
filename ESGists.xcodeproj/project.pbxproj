@@ -67,6 +67,8 @@
 		B109443E1B6EC61900FABE17 /* ListGists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B109443C1B6EC61900FABE17 /* ListGists.storyboard */; };
 		B109443F1B6EC61900FABE17 /* ListUsersGistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B109443D1B6EC61900FABE17 /* ListUsersGistsViewController.swift */; };
 		B10944411B6EC8B000FABE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10944401B6EC8B000FABE17 /* Main.storyboard */; };
+		B13A25F41B72E812005E95A6 /* IDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13A25F31B72E812005E95A6 /* IDTests.swift */; };
+		B13A25F51B72E812005E95A6 /* IDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13A25F31B72E812005E95A6 /* IDTests.swift */; };
 		B13C98CD1B70651900A5A2B3 /* PopularLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */; };
 		B13C98CE1B70651900A5A2B3 /* PopularLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */; };
 		B13C98D51B70734500A5A2B3 /* LanguageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98D41B70734500A5A2B3 /* LanguageSet.swift */; };
@@ -124,7 +126,7 @@
 		B10943D21B6EC3C300FABE17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B10943D51B6EC3C300FABE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B10943D71B6EC3C300FABE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B10943E91B6EC45100FABE17 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		B10943E91B6EC45100FABE17 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B10943EF1B6EC4E600FABE17 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		B10943F21B6EC53000FABE17 /* AuthorizationsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationsAPI.swift; sourceTree = "<group>"; };
 		B10943F31B6EC53000FABE17 /* GistsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistsAPI.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		B109443C1B6EC61900FABE17 /* ListGists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListGists.storyboard; sourceTree = "<group>"; };
 		B109443D1B6EC61900FABE17 /* ListUsersGistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUsersGistsViewController.swift; sourceTree = "<group>"; };
 		B10944401B6EC8B000FABE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B13A25F31B72E812005E95A6 /* IDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDTests.swift; sourceTree = "<group>"; };
 		B13C98CC1B70651900A5A2B3 /* PopularLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularLanguage.swift; sourceTree = "<group>"; };
 		B13C98D41B70734500A5A2B3 /* LanguageSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSet.swift; sourceTree = "<group>"; };
 		B13C98D71B70854400A5A2B3 /* LanguageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTests.swift; sourceTree = "<group>"; };
@@ -272,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				B13C98D71B70854400A5A2B3 /* LanguageTests.swift */,
+				B13A25F31B72E812005E95A6 /* IDTests.swift */,
 			);
 			path = ESGistsTests;
 			sourceTree = "<group>";
@@ -893,6 +897,7 @@
 			files = (
 				B10943A11B6EC39A00FABE17 /* ESGists_OSXTests.swift in Sources */,
 				B13C98D81B70854400A5A2B3 /* LanguageTests.swift in Sources */,
+				B13A25F41B72E812005E95A6 /* IDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +934,7 @@
 			files = (
 				B10943BD1B6EC3AA00FABE17 /* ESGists_iOSTests.swift in Sources */,
 				B13C98D91B70854800A5A2B3 /* LanguageTests.swift in Sources */,
+				B13A25F51B72E812005E95A6 /* IDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

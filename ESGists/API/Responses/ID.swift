@@ -7,6 +7,7 @@
 //
 
 import Himotoki
+import Ocean
 
 public struct ID {
 	
@@ -44,5 +45,40 @@ extension ID : CustomStringConvertible {
 	public var description:String {
 		
 		return "\(self.value)"
+	}
+}
+
+// MARK : Equatable
+
+extension ID : Equatable {
+	
+}
+
+public func == (lhs:ID, rhs:ID) -> Bool {
+	
+	return lhs.value == rhs.value
+}
+
+// MARK : Archive
+
+private let IDArchiveValueKey = "value"
+
+extension ID : DataArchivable {
+	
+	public init?(coder aDecoder: NSCoder) {
+		
+		guard let value = aDecoder.decodeObjectForKey(IDArchiveValueKey) as? NSNumber else {
+			
+			return nil
+		}
+		
+		self.init(value.unsignedLongLongValue)
+	}
+	
+	public func encodeWithCoder(aCoder: NSCoder) {
+		
+		let value = NSNumber(unsignedLongLong: self.value)
+		
+		aCoder.encodeObject(value, forKey:IDArchiveValueKey)
 	}
 }
