@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.source_files  = "ESGists/**/*.swift"
 
   s.dependency  'Swim', '~> 1.3.14'
+  s.dependency  'Ocean', '~> 1.3.14'
   s.dependency  'ESThread', '~> 0.1.0'
   s.dependency  'ESActiveCounter', '~> 0.1.3'
   s.dependency  'ESCoreGraphicsExtension', '~> 0.1.2'
