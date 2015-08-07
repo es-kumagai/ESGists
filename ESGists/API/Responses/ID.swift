@@ -58,27 +58,3 @@ public func == (lhs:ID, rhs:ID) -> Bool {
 	
 	return lhs.value == rhs.value
 }
-
-// MARK : Archive
-
-private let IDArchiveValueKey = "value"
-
-extension ID : DataArchivable {
-	
-	public static func decodeWithCoder(aDecoder: NSCoder) -> ID? {
-		
-		guard let value = aDecoder.decodeObjectForKey(IDArchiveValueKey) as? NSNumber else {
-			
-			return nil
-		}
-		
-		return ID(value.unsignedLongLongValue)
-	}
-	
-	public func encodeWithCoder(aCoder: NSCoder) {
-		
-		let value = NSNumber(unsignedLongLong: self.value)
-		
-		aCoder.encodeObject(value, forKey:IDArchiveValueKey)
-	}
-}

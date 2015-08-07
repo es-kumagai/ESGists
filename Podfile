@@ -12,7 +12,7 @@ def pods
 	pod 'ESThread', '~> 0.1.0'
 	pod 'ESActiveCounter', '~> 0.1.3'
 	pod 'ESCoreGraphicsExtension', '~> 0.1.2'
-	pod 'ESNotification', '~> 0.1.0'
+	pod 'ESNotification', :git => 'https://github.com/EZ-NET/ESNotification.git', :branch => 'master'
 
 end
 
