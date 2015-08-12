@@ -78,6 +78,13 @@
 		B13C98DB1B7088E700A5A2B3 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */; };
 		B13C98DC1B7088E700A5A2B3 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */; };
 		B152E2871B6EC9D4008B485A /* SampleAccount.plist in Resources */ = {isa = PBXBuildFile; fileRef = B152E2861B6EC9D4008B485A /* SampleAccount.plist */; };
+		B1BD64E21B7B76C1002DFDD0 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD64E11B7B76C1002DFDD0 /* UsersAPI.swift */; };
+		B1BD64E31B7B76C1002DFDD0 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD64E11B7B76C1002DFDD0 /* UsersAPI.swift */; };
+		B1BD64E71B7B796F002DFDD0 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BD64E61B7B796F002DFDD0 /* Users.storyboard */; };
+		B1BD64E91B7B797F002DFDD0 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD64E81B7B797F002DFDD0 /* UsersViewController.swift */; };
+		B1BD64EA1B7B7A2F002DFDD0 /* ESGists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10943AE1B6EC3AA00FABE17 /* ESGists.framework */; };
+		B1BD64EB1B7B7A2F002DFDD0 /* ESGists.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B10943AE1B6EC3AA00FABE17 /* ESGists.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1BD64F01B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD64EF1B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift */; };
 		ECE61BEC47B158DCBD14F363 /* Pods_ESGists_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5817DF71CE6EA2EE1791E02D /* Pods_ESGists_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -96,7 +103,28 @@
 			remoteGlobalIDString = B10943AD1B6EC3AA00FABE17;
 			remoteInfo = ESGists_iOS;
 		};
+		B1BD64EC1B7B7A2F002DFDD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B109436A1B6EC37A00FABE17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10943AD1B6EC3AA00FABE17;
+			remoteInfo = ESGists_iOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B1BD64EE1B7B7A2F002DFDD0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1BD64EB1B7B7A2F002DFDD0 /* ESGists.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0CFAB14C6ADF55CF2D001F0B /* Pods-ESGists_OSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_OSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_OSXTests/Pods-ESGists_OSXTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +192,10 @@
 		B13C98EB1B70D75D00A5A2B3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B152E2861B6EC9D4008B485A /* SampleAccount.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SampleAccount.plist; path = Private/SampleAccount.plist; sourceTree = "<group>"; };
 		B152E2881B6ECBE2008B485A /* ESGists.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ESGists.podspec; sourceTree = "<group>"; };
+		B1BD64E11B7B76C1002DFDD0 /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		B1BD64E61B7B796F002DFDD0 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
+		B1BD64E81B7B797F002DFDD0 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		B1BD64EF1B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewController.swift; sourceTree = "<group>"; };
 		B24C9949C290A58CD3EE38D4 /* Pods-ESGists_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_iOS/Pods-ESGists_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B65C47A0DE2C0E505D4204F4 /* Pods_ESGistsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESGistsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B897F98282BC811B427EEF3C /* Pods-ESGists_OSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_OSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_OSXTests/Pods-ESGists_OSXTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				593AD226B716BAABDEC18D71 /* Pods_ESGistsTestApp.framework in Frameworks */,
+				B1BD64EA1B7B7A2F002DFDD0 /* ESGists.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +360,9 @@
 				B10944341B6EC61000FABE17 /* CreateNewAuthorizationViewController.swift */,
 				B109443C1B6EC61900FABE17 /* ListGists.storyboard */,
 				B109443D1B6EC61900FABE17 /* ListUsersGistsViewController.swift */,
+				B1BD64E61B7B796F002DFDD0 /* Users.storyboard */,
+				B1BD64E81B7B797F002DFDD0 /* UsersViewController.swift */,
+				B1BD64EF1B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift */,
 				B10944351B6EC61000FABE17 /* Errors */,
 				B10944281B6EC56D00FABE17 /* Alert */,
 				B109442B1B6EC57D00FABE17 /* Authorization */,
@@ -354,6 +390,7 @@
 				B10943F21B6EC53000FABE17 /* AuthorizationsAPI.swift */,
 				B10943F31B6EC53000FABE17 /* GistsAPI.swift */,
 				B10943F41B6EC53000FABE17 /* GitHubAPI.swift */,
+				B1BD64E11B7B76C1002DFDD0 /* UsersAPI.swift */,
 				B10943F51B6EC53000FABE17 /* Request */,
 				B10943F91B6EC53000FABE17 /* Responses */,
 			);
@@ -561,10 +598,12 @@
 				B10943C71B6EC3C300FABE17 /* Resources */,
 				514F6E3F6479F84176F1F35E /* Embed Pods Frameworks */,
 				0C23529B94714A42BA983077 /* Copy Pods Resources */,
+				B1BD64EE1B7B7A2F002DFDD0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B1BD64ED1B7B7A2F002DFDD0 /* PBXTargetDependency */,
 			);
 			name = ESGistsTestApp;
 			productName = ESGistsTestApp;
@@ -655,6 +694,7 @@
 				B109443A1B6EC61000FABE17 /* CreateNewAuthorization.storyboard in Resources */,
 				B109443E1B6EC61900FABE17 /* ListGists.storyboard in Resources */,
 				B10944411B6EC8B000FABE17 /* Main.storyboard in Resources */,
+				B1BD64E71B7B796F002DFDD0 /* Users.storyboard in Resources */,
 				B10944381B6EC61000FABE17 /* CreateGist.storyboard in Resources */,
 				B152E2871B6EC9D4008B485A /* SampleAccount.plist in Resources */,
 				B10943D61B6EC3C300FABE17 /* LaunchScreen.storyboard in Resources */,
@@ -881,6 +921,7 @@
 				B10944261B6EC53000FABE17 /* Language.swift in Sources */,
 				B109441E1B6EC53000FABE17 /* OAuthAppInfo.swift in Sources */,
 				B10944201B6EC53000FABE17 /* OAuthToken.swift in Sources */,
+				B1BD64E21B7B76C1002DFDD0 /* UsersAPI.swift in Sources */,
 				B10944081B6EC53000FABE17 /* GistsAPI.swift in Sources */,
 				B10944101B6EC53000FABE17 /* Scope.swift in Sources */,
 				B109441C1B6EC53000FABE17 /* ID.swift in Sources */,
@@ -918,6 +959,7 @@
 				B10944271B6EC53000FABE17 /* Language.swift in Sources */,
 				B109441F1B6EC53000FABE17 /* OAuthAppInfo.swift in Sources */,
 				B10944211B6EC53000FABE17 /* OAuthToken.swift in Sources */,
+				B1BD64E31B7B76C1002DFDD0 /* UsersAPI.swift in Sources */,
 				B10944091B6EC53000FABE17 /* GistsAPI.swift in Sources */,
 				B10944111B6EC53000FABE17 /* Scope.swift in Sources */,
 				B109441D1B6EC53000FABE17 /* ID.swift in Sources */,
@@ -946,9 +988,11 @@
 				B10943F01B6EC4E600FABE17 /* Extension.swift in Sources */,
 				B10944361B6EC61000FABE17 /* GistSummaryTableViewCell.swift in Sources */,
 				B109443B1B6EC61000FABE17 /* CreateNewAuthorizationViewController.swift in Sources */,
+				B1BD64F01B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift in Sources */,
 				B109443F1B6EC61900FABE17 /* ListUsersGistsViewController.swift in Sources */,
 				B10943CE1B6EC3C300FABE17 /* ViewController.swift in Sources */,
 				B109442A1B6EC56D00FABE17 /* Alerts.swift in Sources */,
+				B1BD64E91B7B797F002DFDD0 /* UsersViewController.swift in Sources */,
 				B10943CC1B6EC3C300FABE17 /* AppDelegate.swift in Sources */,
 				B109442D1B6EC57D00FABE17 /* Authorization.swift in Sources */,
 			);
@@ -966,6 +1010,11 @@
 			isa = PBXTargetDependency;
 			target = B10943AD1B6EC3AA00FABE17 /* ESGists_iOS */;
 			targetProxy = B10943B91B6EC3AA00FABE17 /* PBXContainerItemProxy */;
+		};
+		B1BD64ED1B7B7A2F002DFDD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10943AD1B6EC3AA00FABE17 /* ESGists_iOS */;
+			targetProxy = B1BD64EC1B7B7A2F002DFDD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1207,6 +1256,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ESGistsTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1222,6 +1272,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ESGistsTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

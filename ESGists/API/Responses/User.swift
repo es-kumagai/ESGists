@@ -12,6 +12,7 @@ public struct GistUser {
 	
 	public var login:String
 	public var id:ID
+	public var name:String?
 	public var gravatarId:String
 	public var urls:URLs
 	public var type:Type
@@ -52,6 +53,7 @@ extension GistUser : Decodable {
 		
 			e <| "login",
 			e <| "id",
+			e <|? "name",
 			e <| "gravatar_id",
 			GistUser.URLs.decode(e),
 			e <| "type",
