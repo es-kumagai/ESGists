@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.dependency  'Swim', '~> 1.4.0'
   s.dependency  'Ocean', '~> 1.4.0'
   s.dependency  'ESThread', '~> 0.1.0'
-  s.dependency  'ESActiveCounter', '~> 0.2.0'
+  s.dependency  'ESActiveCounter', '~> 0.1.4'
   s.dependency  'ESCoreGraphicsExtension', '~> 0.1.3'
   s.dependency  'ESNotification', '~> 0.2.0'
 
