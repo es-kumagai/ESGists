@@ -56,7 +56,7 @@ extension AuthorizationResponse : Decodable {
 	
 	public static func decode(e: Extractor) -> AuthorizationResponse? {
 
-		return build(
+		return build(AuthorizationResponse.init)(
 			
 			e <| "id",
 			e <| "url",
@@ -70,7 +70,7 @@ extension AuthorizationResponse : Decodable {
 			Gist.Timestamp.decode(e),
 			e <|? "fingerprint"
 			
-			).map(AuthorizationResponse.init)
+			)
 	}
 }
 

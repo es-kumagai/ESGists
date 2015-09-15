@@ -60,7 +60,7 @@ extension Gist : Decodable {
 	
 	public static func decode(e: Extractor) -> Gist? {
 		
-		return build(
+		return build(Gist.init)(
 		
 			e <| "id",
 			e <| "description",
@@ -72,7 +72,7 @@ extension Gist : Decodable {
 			Gist.Timestamp.decode(e),
 			Gist.URLs.decode(e)
 			
-		).map(Gist.init)
+		)
 	}
 }
 
@@ -80,7 +80,7 @@ extension Gist.GistFileInfo : Decodable {
 
 	public static func decode(e: Extractor) -> Gist.GistFileInfo? {
 
-		return build(
+		return build(Gist.GistFileInfo.init)(
 		
 			e <| "size",
 			e <| "raw_url",
@@ -88,7 +88,7 @@ extension Gist.GistFileInfo : Decodable {
 			e <| "truncated",
 			e <|? "language"
 		
-		).map(Gist.GistFileInfo.init)
+		)
 	}
 }
 
@@ -96,7 +96,7 @@ extension Gist.URLs : Decodable {
 
 	public static func decode(e: Extractor) -> Gist.URLs? {
 		
-		return build(
+		return build(Gist.URLs.init)(
 		
 			e <| "url",
 			e <| "forks_url",
@@ -106,7 +106,7 @@ extension Gist.URLs : Decodable {
 			e <| "git_pull_url",
 			e <| "git_push_url"
 		
-		).map(Gist.URLs.init)
+		)
 	}
 }
 
@@ -114,12 +114,12 @@ extension Gist.Timestamp : Decodable {
 	
 	public static func decode(e: Extractor) -> Gist.Timestamp? {
 		
-		return build(
+		return build(Gist.Timestamp.init)(
 			
 			e <| "updated_at",
 			e <| "created_at"
 			
-			).map(Gist.Timestamp.init)
+			)
 	}
 }
 

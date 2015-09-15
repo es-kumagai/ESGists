@@ -21,15 +21,15 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/EZ-NET/ESGists.git", :tag => s.version }
   s.source_files  = "ESGists/**/*.swift"
 
-  s.dependency  'Swim', '~> 1.3.14'
-  s.dependency  'Ocean'
+  s.dependency  'Swim', '~> 1.4.0'
+  s.dependency  'Ocean', '~> 1.4.0'
   s.dependency  'ESThread', '~> 0.1.0'
-  s.dependency  'ESActiveCounter', '~> 0.1.3'
-  s.dependency  'ESCoreGraphicsExtension', '~> 0.1.2'
-  s.dependency  'ESNotification', '~> 0.1.0'
+  s.dependency  'ESActiveCounter', '~> 0.2.0'
+  s.dependency  'ESCoreGraphicsExtension', '~> 0.1.3'
+  s.dependency  'ESNotification', '~> 0.2.0'
 
-  s.dependency  'APIKit', '~> 1.0.0-beta1'
-  s.dependency  'Himotoki', '~> 0.5.1'
+  s.dependency  'APIKit', '~> 1.0.0-beta4'
+  s.dependency  'Himotoki', '~> 0.6.3'
 
   s.osx.dependency  'ESAppKitExtension', '~> 0.1.1'
 

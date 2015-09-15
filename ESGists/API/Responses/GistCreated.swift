@@ -18,11 +18,11 @@ extension GistCreated : Decodable {
 	
 	public static func decode(e: Extractor) -> GistCreated? {
 		
-		return build(
+		return build(GistCreated.init)(
 
 			Gist.decode(e),
 			e <|| "history"
 		
-		).map(GistCreated.init)
+		)
 	}
 }

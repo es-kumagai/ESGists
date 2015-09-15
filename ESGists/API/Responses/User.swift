@@ -49,7 +49,7 @@ extension GistUser : Decodable {
 
 	public static func decode(e: Extractor) -> GistUser? {
 		
-		return build(
+		return build(GistUser.init)(
 		
 			e <| "login",
 			e <| "id",
@@ -59,7 +59,7 @@ extension GistUser : Decodable {
 			e <| "type",
 			e <| "site_admin"
 			
-		).map(GistUser.init)
+		)
 	}
 }
 
@@ -67,7 +67,7 @@ extension GistUser.URLs : Decodable {
 	
 	public static func decode(e: Extractor) -> GistUser.URLs? {
 
-		return build(
+		return build(GistUser.URLs.init)(
 		
 			e <| "avatar_url",
 			e <| "url",
@@ -82,6 +82,6 @@ extension GistUser.URLs : Decodable {
 			e <| "events_url",
 			e <| "received_events_url"
 		
-		).map(GistUser.URLs.init)
+		)
 	}
 }

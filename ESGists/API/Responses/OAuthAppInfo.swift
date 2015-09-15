@@ -19,12 +19,12 @@ extension OAuthAppInfo : Decodable {
 	
 	public static func decode(e: Extractor) -> OAuthAppInfo? {
 		
-		return build(
+		return build(OAuthAppInfo.init)(
 			
 			e <| "name",
 			e <| "client_id",
 			e <| "url"
 
-		).map(OAuthAppInfo.init)
+		)
 	}
 }
