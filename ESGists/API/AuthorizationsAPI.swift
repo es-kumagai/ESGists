@@ -43,7 +43,7 @@ extension GitHubAPI {
 		public struct ListYourAuthorizations : OAuthAuthorizationsRequest {
 			
 			public let method:HTTPMethod = .GET
-			public let path:String = "/"
+			public let path:String = ""
 			public let acceptableStatusCodes:Set<Int> = [ 200 ]
 			
 			public var authorization:GitHubAuthorization
@@ -57,6 +57,11 @@ extension GitHubAPI {
 				
 				return decodeArray(object)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 		
 		public struct GetSingleAuthorization : OAuthAuthorizationsRequest {
@@ -82,12 +87,17 @@ extension GitHubAPI {
 				
 				return decode(object)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 		
 		public struct CreateNewAuthorization : OAuthAuthorizationsRequest {
 
 			public let method:HTTPMethod = .POST
-			public let path:String = "/"
+			public let path:String = ""
 			public let acceptableStatusCodes:Set<Int> = [ 201 ]
 
 			public var authorization:GitHubAuthorization
@@ -124,6 +134,11 @@ extension GitHubAPI {
 				
 				return decode(object)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 
 		public struct GetOrCreateNewAuthorization : OAuthAuthorizationsRequest {
@@ -178,6 +193,11 @@ extension GitHubAPI {
 				
 				return AuthorizationResponseWithStatus(status: URLResponse.statusCode, authorization: authorization)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 		
 		public struct DeleteAuthorization : OAuthAuthorizationsRequest {
@@ -205,6 +225,11 @@ extension GitHubAPI {
 
 				return ()
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 	}
 }

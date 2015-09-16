@@ -51,13 +51,18 @@ extension GitHubAPI {
 				
 				return decode(object)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 		
 		public struct GetAuthenticatedUser : UsersRequest, RequestWithAuthentication {
 			
 			public let method:HTTPMethod = .GET
 			public let acceptableStatusCodes:Set<Int> = [ 200 ]
-			public let path:String = "/"
+			public let path:String = ""
 			
 			public var authorization:GitHubAuthorization
 			
@@ -73,7 +78,7 @@ extension GitHubAPI {
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistUserError?
+                return decode(object) as GistError?
             }
 		}
 	}

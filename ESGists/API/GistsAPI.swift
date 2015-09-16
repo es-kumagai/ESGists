@@ -71,13 +71,18 @@ extension GitHubAPI {
 				
 				return decodeArray(object)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 		
 		public struct CreateGist : GistsRequest, RequestWithAuthentication {
 		
 			public let method:HTTPMethod = .POST
 			public let acceptableStatusCodes:Set<Int> = [ 201 ]
-			public let path:String = "/"
+			public let path:String = ""
 			
 			public var files:[GistFile]
 			public var description:String
@@ -112,6 +117,11 @@ extension GitHubAPI {
 				
 				return decode(object)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistError?
+            }
 		}
 	}
 }
