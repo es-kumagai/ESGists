@@ -70,6 +70,11 @@ extension GitHubAPI {
 				
 				return decode(object)
 			}
+            
+            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+                
+                return decode(object) as GistUserError?
+            }
 		}
 	}
 }

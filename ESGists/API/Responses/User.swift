@@ -45,6 +45,12 @@ public struct GistUser {
 	}
 }
 
+public struct GistUserError {
+
+    public var message:String
+    public var documentationUrl:String
+}
+
 extension GistUser : Decodable {
 
 	public static func decode(e: Extractor) -> GistUser? {
@@ -84,4 +90,36 @@ extension GistUser.URLs : Decodable {
 		
 		)
 	}
+}
+
+extension GistUserError : Decodable {
+    
+    public static func decode(e: Extractor) -> GistUserError? {
+        
+        return build(GistUserError.init)(
+        
+            e <| "message",
+            e <| "documentation_url"
+        )
+    }
+}
+
+extension GistUserError : ErrorType {
+    
+}
+
+extension GistUserError : CustomStringConvertible {
+    
+    public var description:String {
+        
+        return self.message
+    }
+}
+
+extension GistUserError : CustomDebugStringConvertible {
+    
+    public var debugDescription:String {
+        
+        return "\(self.message), \(self.documentationUrl)"
+    }
 }
