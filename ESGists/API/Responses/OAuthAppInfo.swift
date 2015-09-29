@@ -17,9 +17,9 @@ public struct OAuthAppInfo {
 
 extension OAuthAppInfo : Decodable {
 	
-	public static func decode(e: Extractor) -> OAuthAppInfo? {
+	public static func decode(e: Extractor) throws -> OAuthAppInfo {
 		
-		return build(OAuthAppInfo.init)(
+		return try build(OAuthAppInfo.init)(
 			
 			e <| "name",
 			e <| "client_id",

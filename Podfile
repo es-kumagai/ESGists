@@ -6,7 +6,7 @@ use_frameworks!
 def pods
 
 	pod 'APIKit', :git => 'https://github.com/ishkawa/APIKit.git', :branch => 'master'
-	pod 'Himotoki', :git => 'https://github.com/ikesyo/Himotoki.git', :branch => 'swift2'
+	pod 'Himotoki', :git => 'https://github.com/ikesyo/Himotoki.git'
 	pod 'Swim', :git => 'https://github.com/EZ-NET/ESSwim', :branch => 'master'
 	pod 'Ocean', :git => 'https://github.com/EZ-NET/ESOcean', :branch => 'master'
 	pod 'ESThread', '~> 0.1.0'

@@ -38,18 +38,25 @@ public struct GistUser {
 		
 		case User
 		
-		public static func decode(e: Extractor) -> Type? {
-			
-			return String.decode(e).flatMap(Type.init)
+		public static func decode(e: Extractor) throws -> Type {
+
+            let string = try String.decode(e)
+            
+            guard let result = Type(rawValue: string) else {
+                
+                throw DecodeError.TypeMismatch(expected: "\(DecodedType.self)", actual: "\(string)", keyPath: nil)
+            }
+            
+            return result
 		}
 	}
 }
 
 extension GistUser : Decodable {
 
-	public static func decode(e: Extractor) -> GistUser? {
+	public static func decode(e: Extractor) throws -> GistUser {
 		
-		return build(GistUser.init)(
+		return try build(GistUser.init)(
 		
 			e <| "login",
 			e <| "id",
@@ -65,9 +72,9 @@ extension GistUser : Decodable {
 
 extension GistUser.URLs : Decodable {
 	
-	public static func decode(e: Extractor) -> GistUser.URLs? {
+	public static func decode(e: Extractor) throws -> GistUser.URLs {
 
-		return build(GistUser.URLs.init)(
+		return try build(GistUser.URLs.init)(
 		
 			e <| "avatar_url",
 			e <| "url",

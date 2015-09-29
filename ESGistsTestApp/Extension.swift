@@ -10,6 +10,7 @@
 
 import UIKit
 import APIKit
+import Himotoki
 
 // MARK: - UIKit
 
@@ -87,3 +88,19 @@ extension APIError : CustomDebugStringConvertible {
 	}
 }
 
+// MARK: - Himotoki
+
+extension DecodeError : CustomDebugStringConvertible {
+    
+    public var debugDescription:String {
+        
+        switch self {
+            
+        case let .MissingKeyPath(keypath):
+            return "Failed to decode because missing key path (\(keypath))"
+            
+        case let .TypeMismatch(expected: expected, actual: actual, keyPath: keypath):
+            return "Failed to decode. Expected type '\(expected)' but '\(actual)'" + (keypath.map { " in \($0)" } ?? "") + " is not match."
+        }
+    }
+}

@@ -55,12 +55,27 @@ extension GitHubAPI {
 			
 			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> [AuthorizationResponse]? {
 				
-				return decodeArray(object)
+                do {
+
+                    return try decodeArray(object)
+                }
+                catch {
+                    
+                    NSLog("\(error)")
+                    return nil
+                }
 			}
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistError?
+                do {
+
+                    return try decode(object) as GistError
+                }
+                catch {
+                    
+                    return error
+                }
             }
 		}
 		
@@ -85,12 +100,27 @@ extension GitHubAPI {
 			
 			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> AuthorizationResponse? {
 				
-				return decode(object)
+                do {
+
+                    return try decode(object) as AuthorizationResponse
+                }
+                catch {
+                    
+                    NSLog("\(error)")
+                    return nil
+                }
 			}
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistError?
+                do {
+
+                    return try decode(object) as GistError
+                }
+                catch {
+                    
+                    return error
+                }
             }
 		}
 		
@@ -132,12 +162,27 @@ extension GitHubAPI {
 			
 			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> AuthorizationResponse? {
 				
-				return decode(object)
+                do {
+
+                    return try decode(object) as AuthorizationResponse
+                }
+                catch {
+                    
+                    NSLog("\(error)")
+                    return nil
+                }
 			}
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistError?
+                do {
+
+                    return try decode(object) as GistError
+                }
+                catch {
+                    
+                    return error
+                }
             }
 		}
 
@@ -186,17 +231,29 @@ extension GitHubAPI {
 			
 			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> AuthorizationResponseWithStatus? {
 				
-				guard let authorization:AuthorizationResponse = decode(object) else {
-					
-					return nil
-				}
+                do {
+
+                    let authorization = try decode(object) as AuthorizationResponse
 				
-				return AuthorizationResponseWithStatus(status: URLResponse.statusCode, authorization: authorization)
+                    return AuthorizationResponseWithStatus(status: URLResponse.statusCode, authorization: authorization)
+                }
+                catch {
+                    
+                    NSLog("\(error)")
+                    return nil
+                }
 			}
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistError?
+                do {
+
+                    return try decode(object) as GistError
+                }
+                catch {
+                    
+                    return error
+                }
             }
 		}
 		
@@ -228,7 +285,14 @@ extension GitHubAPI {
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistError?
+                do {
+
+                    return try decode(object) as GistError
+                }
+                catch {
+                    
+                    return error
+                }
             }
 		}
 	}

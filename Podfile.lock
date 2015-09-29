@@ -15,7 +15,7 @@ PODS:
     - ESCoreGraphicsExtension (~> 0.1.2)
   - ESTestKit (0.3.3)
   - ESThread (0.1.0)
-  - Himotoki (0.6.3)
+  - Himotoki (1.0.0)
   - Ocean (1.4.0):
     - ESActiveCounter (~> 0.1.4)
     - ESAppKitExtension (~> 0.1.1)
@@ -35,7 +35,7 @@ DEPENDENCIES:
   - ESNotification (~> 0.2.0)
   - ESTestKit
   - ESThread (~> 0.1.0)
-  - Himotoki (from `https://github.com/ikesyo/Himotoki.git`, branch `swift2`)
+  - Himotoki (from `https://github.com/ikesyo/Himotoki.git`)
   - Ocean (from `https://github.com/EZ-NET/ESOcean`, branch `master`)
   - Swim (from `https://github.com/EZ-NET/ESSwim`, branch `master`)
 
@@ -44,7 +44,6 @@ EXTERNAL SOURCES:
     :branch: master
     :git: https://github.com/ishkawa/APIKit.git
   Himotoki:
-    :branch: swift2
     :git: https://github.com/ikesyo/Himotoki.git
   Ocean:
     :branch: master
@@ -55,10 +54,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APIKit:
-    :commit: 7731dafb7ab0f0f903a6f0d2185719378ac9bbf1
+    :commit: 627da1a521b153f204f1cdd391fe1da17f73ce3c
     :git: https://github.com/ishkawa/APIKit.git
   Himotoki:
-    :commit: a8854a7252c2c9aa8d016770173d1b29c0985813
+    :commit: 548227be152fd237e48dcae1ee8306f50660af8c
     :git: https://github.com/ikesyo/Himotoki.git
   Ocean:
     :commit: 1234aac116cd1903ac386a760d23f456fc3fdbaf
@@ -76,9 +75,9 @@ SPEC CHECKSUMS:
   ESProgressHUD: 1ce6537e3813cd96d8fb81ae34d859cd5bd2fad2
   ESTestKit: 4e613c869c0bcd8012282b03805f072a932ccf3b
   ESThread: aa7f1d3e412716cef6c62e116a1da761449f5e48
-  Himotoki: adc0874e4f46e0b7515bca18549ac5ca9477fd49
+  Himotoki: 248b55af276aef1af1a326e918aed30bc5ee25dd
   Ocean: f6eeb71ff6df0693660ddb4524a2ee7ff43d7530
-  Result: 6c990ec4a72470672f9fc5b6fef009da0f6f40d1
+  Result: af24e3e57ab81005ec4221a53fd36dc1e7a52869
   Swim: 5d6b294188fd7ecde95450ca3e45e9d6db7df470
 
 COCOAPODS: 0.39.0.beta.4

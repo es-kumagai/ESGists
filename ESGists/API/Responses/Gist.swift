@@ -39,7 +39,7 @@ extension Gist {
 		public var size:Int
 		public var rawUrl:URL
 		public var type:String
-		public var truncated:Bool
+		public var truncated:Bool?
 		public var language:Language?
 	}
 	
@@ -58,14 +58,14 @@ extension Gist {
 
 extension Gist : Decodable {
 	
-	public static func decode(e: Extractor) -> Gist? {
+	public static func decode(e: Extractor) throws -> Gist {
 		
-		return build(Gist.init)(
+		return try build(Gist.init)(
 		
 			e <| "id",
 			e <| "description",
 			e <| "public",
-			e <| "owner",
+			e <|? "owner",
 			e <|? "user",
 			e <|-| "files",
 			e <| "comments",
@@ -78,14 +78,14 @@ extension Gist : Decodable {
 
 extension Gist.GistFileInfo : Decodable {
 
-	public static func decode(e: Extractor) -> Gist.GistFileInfo? {
+	public static func decode(e: Extractor) throws -> Gist.GistFileInfo {
 
-		return build(Gist.GistFileInfo.init)(
+		return try build(Gist.GistFileInfo.init)(
 		
 			e <| "size",
 			e <| "raw_url",
 			e <| "type",
-			e <| "truncated",
+			e <|? "truncated",
 			e <|? "language"
 		
 		)
@@ -94,9 +94,9 @@ extension Gist.GistFileInfo : Decodable {
 
 extension Gist.URLs : Decodable {
 
-	public static func decode(e: Extractor) -> Gist.URLs? {
+	public static func decode(e: Extractor) throws -> Gist.URLs {
 		
-		return build(Gist.URLs.init)(
+		return try build(Gist.URLs.init)(
 		
 			e <| "url",
 			e <| "forks_url",
@@ -112,9 +112,9 @@ extension Gist.URLs : Decodable {
 
 extension Gist.Timestamp : Decodable {
 	
-	public static func decode(e: Extractor) -> Gist.Timestamp? {
+	public static func decode(e: Extractor) throws -> Gist.Timestamp {
 		
-		return build(Gist.Timestamp.init)(
+		return try build(Gist.Timestamp.init)(
 			
 			e <| "updated_at",
 			e <| "created_at"

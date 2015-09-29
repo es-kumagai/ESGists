@@ -25,9 +25,9 @@ public struct URL : RawRepresentable {
 
 extension URL : Decodable {
 	
-	public static func decode(e: Extractor) -> URL? {
+	public static func decode(e: Extractor) throws -> URL {
 		
-		return String.decode(e).map(URL.init)
+		return try URL(rawValue: String.decode(e))
 	}
 }
 

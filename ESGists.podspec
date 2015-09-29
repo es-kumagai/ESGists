@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.dependency  'ESNotification', '~> 0.2.0'
 
   s.dependency  'APIKit', '~> 1.0.0-beta4'
-  s.dependency  'Himotoki', '~> 0.6.3'
+  s.dependency  'Himotoki', '~> 1.0.0'
 
   s.osx.dependency  'ESAppKitExtension', '~> 0.1.1'
 

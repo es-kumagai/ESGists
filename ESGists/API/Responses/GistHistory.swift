@@ -17,9 +17,9 @@ public struct GistHistory {
 
 extension GistHistory : Decodable {
 	
-	public static func decode(e: Extractor) -> GistHistory? {
+	public static func decode(e: Extractor) throws -> GistHistory {
 		
-		return build(GistHistory.init)(
+		return try build(GistHistory.init)(
 		
 			e <| "url",
 			e <| "version",

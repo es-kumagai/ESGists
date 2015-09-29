@@ -42,8 +42,8 @@ extension OAuthToken : StringLiteralConvertible {
 
 extension OAuthToken : Decodable {
 	
-	public static func decode(e: Extractor) -> OAuthToken? {
+	public static func decode(e: Extractor) throws -> OAuthToken {
 		
-		return String.decode(e).flatMap { OAuthToken.init($0) }
+		return OAuthToken(try String.decode(e))
 	}
 }

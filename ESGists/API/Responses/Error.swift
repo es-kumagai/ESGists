@@ -16,9 +16,9 @@ public struct GistError {
 
 extension GistError : Decodable {
     
-    public static func decode(e: Extractor) -> GistError? {
+    public static func decode(e: Extractor) throws -> GistError {
         
-        return build(GistError.init)(
+        return try build(GistError.init)(
             
             e <| "message",
             e <| "documentation_url"

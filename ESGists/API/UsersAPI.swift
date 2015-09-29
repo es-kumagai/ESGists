@@ -49,12 +49,27 @@ extension GitHubAPI {
 			
 			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> GistUser? {
 				
-				return decode(object)
+                do {
+
+                    return try decode(object) as GistUser
+                }
+                catch {
+                    
+                    NSLog("\(error)")
+                    return nil
+                }
 			}
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistError?
+                do {
+
+                    return try decode(object) as GistError
+                }
+                catch {
+                    
+                    return error
+                }
             }
 		}
 		
@@ -73,12 +88,27 @@ extension GitHubAPI {
 			
 			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> GistUser? {
 				
-				return decode(object)
+                do {
+
+                    return try decode(object) as GistUser
+                }
+                catch {
+                    
+                    NSLog("\(error)")
+                    return nil
+                }
 			}
             
             public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
                 
-                return decode(object) as GistError?
+                do {
+
+                    return try decode(object) as GistError
+                }
+                catch {
+                    
+                    return error
+                }
             }
 		}
 	}

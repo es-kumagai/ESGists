@@ -34,9 +34,9 @@ extension ID {
 
 extension ID : Decodable {
 	
-	public static func decode(e: Extractor) -> ID? {
+	public static func decode(e: Extractor) throws -> ID {
 		
-		return UInt64.decode(e).map(ID.init)
+		return try ID(UInt64.decode(e))
 	}
 }
 

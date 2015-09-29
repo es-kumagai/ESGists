@@ -854,9 +854,16 @@ extension Language : LanguageType {
 
 extension Language : Decodable {
 	
-	public static func decode(e: Extractor) -> Language? {
+	public static func decode(e: Extractor) throws -> Language {
 		
-		return String.decode(e).flatMap(Language.init)
+        let string = try String.decode(e)
+        
+        guard let result = Language(rawValue: string) else {
+            
+            throw DecodeError.TypeMismatch(expected: "\(DecodedType.self)", actual: "\(string)", keyPath: nil)
+        }
+
+        return result
 	}
 }
 

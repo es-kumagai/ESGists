@@ -76,8 +76,15 @@ public enum Scope : String {
 
 extension Scope : Decodable {
 	
-	public static func decode(e: Extractor) -> Scope? {
+	public static func decode(e: Extractor) throws -> Scope {
 		
-		return String.decode(e).flatMap(Scope.init)
+        let string = try String.decode(e)
+        
+        guard let result = Scope(rawValue: string) else {
+            
+            throw DecodeError.TypeMismatch(expected: "\(DecodedType.self)", actual: "\(string)", keyPath: nil)
+        }
+        
+		return result
 	}
 }

@@ -54,9 +54,9 @@ public struct AuthorizationResponse {
 
 extension AuthorizationResponse : Decodable {
 	
-	public static func decode(e: Extractor) -> AuthorizationResponse? {
+	public static func decode(e: Extractor) throws -> AuthorizationResponse {
 
-		return build(AuthorizationResponse.init)(
+		return try build(AuthorizationResponse.init)(
 			
 			e <| "id",
 			e <| "url",

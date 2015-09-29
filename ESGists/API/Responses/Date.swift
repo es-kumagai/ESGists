@@ -85,9 +85,16 @@ public struct Date : RawRepresentable {
 
 extension Date : Decodable {
 	
-	public static func decode(e: Extractor) -> Date? {
+	public static func decode(e: Extractor) throws -> Date {
 		
-		return String.decode(e).flatMap(Date.init)
+        let string = try String.decode(e)
+
+        guard let result = Date(string) else {
+            
+            throw DecodeError.TypeMismatch(expected: "\(DecodedType.self)", actual: "\(string)", keyPath: nil)
+        }
+        
+        return result
 	}
 }
 
