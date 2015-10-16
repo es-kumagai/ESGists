@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/EZ-NET/ESGists.git", :tag => s.version }
   s.source_files  = "ESGists/**/*.swift"
 
-  s.dependency  'Swim', '~> 1.4.1'
+  s.dependency  'Swim', '~> 1.4.0'
   s.dependency  'Ocean', '~> 1.4.0'
   s.dependency  'ESThread', '~> 0.1.0'
   s.dependency  'ESActiveCounter', '~> 0.1.4'
