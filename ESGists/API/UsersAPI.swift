@@ -14,7 +14,7 @@ Users API
 https://developer.github.com/v3/users/
 */
 
-public protocol UsersRequest : Request {
+public protocol UsersRequest : RequestType {
 	
 }
 

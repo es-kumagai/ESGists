@@ -14,11 +14,11 @@ public protocol Authorization {
 	var value:String { get }
 }
 
-public protocol GitHubRequest : Request {
+public protocol GitHubRequest : RequestType {
 	
 }
 
-public protocol RequestWithAuthentication : Request {
+public protocol RequestWithAuthentication : RequestType {
 
 	typealias Auth : Authorization
 

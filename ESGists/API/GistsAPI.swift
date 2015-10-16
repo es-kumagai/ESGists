@@ -14,7 +14,7 @@ Gists API
 https://developer.github.com/v3/gists/
 */
 
-public protocol GistsRequest : Request {
+public protocol GistsRequest : RequestType {
 	
 }
 
