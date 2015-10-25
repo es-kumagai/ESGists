@@ -28,7 +28,7 @@ extension UsersRequest {
 
 extension GitHubAPI {
 	
-	public class Users : API {
+	public class Users : Session {
 		
 		public struct GetSingleUser : GitHubRequest {
 			

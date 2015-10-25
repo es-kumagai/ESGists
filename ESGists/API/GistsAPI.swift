@@ -28,7 +28,7 @@ extension GistsRequest {
 
 extension GitHubAPI {
 	
-	public class Gists : API {
+	public class Gists : Session {
 		
 		public struct ListUsersGists : GitHubRequest {
 			

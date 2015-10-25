@@ -28,7 +28,7 @@ extension OAuthAuthorizationsRequest {
 
 extension GitHubAPI {
 	
-	public class OAuthAuthorizations : API {
+	public class OAuthAuthorizations : Session {
 		
 		public enum Option {
 			

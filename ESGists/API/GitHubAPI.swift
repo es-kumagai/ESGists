@@ -43,7 +43,7 @@ extension RequestWithAuthentication {
 	}
 }
 
-public final class GitHubAPI : API {
+public final class GitHubAPI : Session {
 
 }
 
