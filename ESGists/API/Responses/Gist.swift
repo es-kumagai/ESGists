@@ -36,11 +36,17 @@ extension Gist {
 	
 	public struct GistFileInfo {
 		
+        public enum LanguageInfo {
+        
+            case Unknown
+            case Specified(Language)
+        }
+        
 		public var size:Int
 		public var rawUrl:URL
 		public var type:String
 		public var truncated:Bool?
-		public var language:Language?
+		public var language:LanguageInfo?
 	}
 	
 	public struct CommentStatus {
@@ -105,10 +111,31 @@ extension Gist.URLs : Decodable {
 			e <| "html_url",
 			e <| "git_pull_url",
 			e <| "git_push_url"
-		
+			
 		)
 	}
 }
+
+extension Gist.GistFileInfo.LanguageInfo : Decodable {
+	
+	public init(language: String) {
+		
+		if let language = Language(rawValue: language) {
+			
+			self = .Specified(language)
+		}
+		else {
+			
+			self = .Unknown
+		}
+	}
+	
+	public static func decode(e: Extractor) throws -> Gist.GistFileInfo.LanguageInfo.DecodedType {
+		
+		return try Gist.GistFileInfo.LanguageInfo(language: String.decode(e))
+	}
+}
+
 
 extension Gist.Timestamp : Decodable {
 	
