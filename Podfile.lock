@@ -28,14 +28,14 @@ PODS:
   - Swim (1.4.1-beta2)
 
 DEPENDENCIES:
-  - APIKit
+  - APIKit (>= 1.1.2)
   - ESActiveCounter (~> 0.1.4)
   - ESAppKitExtension (~> 0.1.1)
   - ESCoreGraphicsExtension (~> 0.1.3)
   - ESNotification (~> 0.2.0)
   - ESTestKit
   - ESThread (~> 0.1.0)
-  - Himotoki
+  - Himotoki (>= 1.5.0)
   - Ocean (from `https://github.com/EZ-NET/ESOcean`, branch `master`)
   - Swim (from `https://github.com/EZ-NET/ESSwim`, branch `master`)
 
@@ -69,6 +69,6 @@ SPEC CHECKSUMS:
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   Swim: cd5145c6d96b34c4ee60dfd5a7cdfe39fc2fd43c
 
-PODFILE CHECKSUM: 1a477dbc53929649272d163db17b291b76950e9a
+PODFILE CHECKSUM: d30838422ffc624b9bd591e51a2aa37fe1973801
 
 COCOAPODS: 1.0.0.beta.2

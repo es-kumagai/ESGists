@@ -5,8 +5,8 @@ use_frameworks!
 
 def pods
 
-	pod 'APIKit'
-	pod 'Himotoki'
+	pod 'APIKit', '>= 1.1.2'
+	pod 'Himotoki', '>= 1.5.0'
 	pod 'Swim', :git => 'https://github.com/EZ-NET/ESSwim', :branch => 'master'
 	pod 'Ocean', :git => 'https://github.com/EZ-NET/ESOcean', :branch => 'master'
 	pod 'ESThread', '~> 0.1.0'
