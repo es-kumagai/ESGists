@@ -18,10 +18,10 @@ extension GistCreated : Decodable {
 	
 	public static func decode(e: Extractor) throws -> GistCreated {
 		
-		return try build(GistCreated.init)(
+		return try GistCreated(
 
-			Gist.decode(e),
-			e <|| "history"
+			gist: Himotoki.decode(e.rawValue),
+			history: e.array("history")
 		
 		)
 	}

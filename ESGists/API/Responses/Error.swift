@@ -18,10 +18,10 @@ extension GistError : Decodable {
     
     public static func decode(e: Extractor) throws -> GistError {
         
-        return try build(GistError.init)(
+        return try GistError(
             
-            e <| "message",
-            e <| "documentation_url"
+            message: e.value("message"),
+            documentationUrl: e.value("documentation_url")
         )
     }
 }

@@ -19,11 +19,11 @@ extension GistHistory : Decodable {
 	
 	public static func decode(e: Extractor) throws -> GistHistory {
 		
-		return try build(GistHistory.init)(
+		return try GistHistory(
 		
-			e <| "url",
-			e <| "version",
-			e <| "user"
+			url: e.value("url"),
+			version: e.value("version"),
+			user: e.value("user")
 		
 		)
 	}

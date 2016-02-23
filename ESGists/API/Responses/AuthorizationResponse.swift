@@ -56,21 +56,20 @@ extension AuthorizationResponse : Decodable {
 	
 	public static func decode(e: Extractor) throws -> AuthorizationResponse {
 
-		return try build(AuthorizationResponse.init)(
+		return try AuthorizationResponse(
 			
-			e <| "id",
-			e <| "url",
-			e <|| "scopes",
-			e <| "token",
-			e <| "token_last_eight",
-			e <| "hashed_token",
-			e <| "app",
-			e <|? "note",
-			e <|? "note_url",
-			Gist.Timestamp.decode(e),
-			e <|? "fingerprint"
-			
-			)
+			id: e.value("id"),
+			url: e.value("url"),
+			scopes: e.array("scopes"),
+			token: e.value("token"),
+			tokenLastEight: e.value("token_last_eight"),
+			hashedToken: e.value("hashed_token"),
+			app: e.value("app"),
+			note: e.valueOptional("note"),
+			noteUrl: e.valueOptional("note_url"),
+			timestamp: Himotoki.decode(e.rawValue),
+			fingerprint: e.valueOptional("fingerprint")
+		)
 	}
 }
 

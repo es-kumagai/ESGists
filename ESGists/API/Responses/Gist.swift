@@ -66,18 +66,17 @@ extension Gist : Decodable {
 	
 	public static func decode(e: Extractor) throws -> Gist {
 		
-		return try build(Gist.init)(
+		return try Gist(
 		
-			e <| "id",
-			e <| "description",
-			e <| "public",
-			e <|? "owner",
-			e <|? "user",
-			e <|-| "files",
-			e <| "comments",
-			Gist.Timestamp.decode(e),
-			Gist.URLs.decode(e)
-			
+			id: e.value("id"),
+			description: e.value("description"),
+			publicGist: e.value("public"),
+			owner: e.valueOptional("owner"),
+			user: e.valueOptional("user"),
+			files: e.dictionary("files"),
+			commentCount: e.value("comments"),
+			timestamp: Himotoki.decode(e.rawValue),
+			urls: Himotoki.decode(e.rawValue)
 		)
 	}
 }
@@ -86,13 +85,13 @@ extension Gist.GistFileInfo : Decodable {
 
 	public static func decode(e: Extractor) throws -> Gist.GistFileInfo {
 
-		return try build(Gist.GistFileInfo.init)(
+		return try Gist.GistFileInfo(
 		
-			e <| "size",
-			e <| "raw_url",
-			e <| "type",
-			e <|? "truncated",
-			e <|? "language"
+			size: e.value("size"),
+			rawUrl: e.value("raw_url"),
+			type: e.value("type"),
+			truncated: e.valueOptional("truncated"),
+			language: e.valueOptional("language")
 		
 		)
 	}
@@ -102,15 +101,15 @@ extension Gist.URLs : Decodable {
 
 	public static func decode(e: Extractor) throws -> Gist.URLs {
 		
-		return try build(Gist.URLs.init)(
+		return try Gist.URLs(
 		
-			e <| "url",
-			e <| "forks_url",
-			e <| "commits_url",
-			e <| "comments_url",
-			e <| "html_url",
-			e <| "git_pull_url",
-			e <| "git_push_url"
+			url: e.value("url"),
+			forksUrl: e.value("forks_url"),
+			commitsUrl: e.value("commits_url"),
+			commentUrl: e.value("comments_url"),
+			htmlUrl: e.value("html_url"),
+			gitPullUrl: e.value("git_pull_url"),
+			gitPushUrl: e.value("git_push_url")
 			
 		)
 	}
@@ -141,10 +140,10 @@ extension Gist.Timestamp : Decodable {
 	
 	public static func decode(e: Extractor) throws -> Gist.Timestamp {
 		
-		return try build(Gist.Timestamp.init)(
+		return try Gist.Timestamp(
 			
-			e <| "updated_at",
-			e <| "created_at"
+			createdAt: e.value("updated_at"),
+			updatedAt: e.value("created_at")
 			
 			)
 	}

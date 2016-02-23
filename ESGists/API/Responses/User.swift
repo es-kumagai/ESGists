@@ -56,16 +56,15 @@ extension GistUser : Decodable {
 
 	public static func decode(e: Extractor) throws -> GistUser {
 		
-		return try build(GistUser.init)(
+		return try GistUser(
 		
-			e <| "login",
-			e <| "id",
-			e <|? "name",
-			e <| "gravatar_id",
-			GistUser.URLs.decode(e),
-			e <| "type",
-			e <| "site_admin"
-			
+			login: e.value("login"),
+			id: e.value("id"),
+			name: e.valueOptional("name"),
+			gravatarId: e.value("gravatar_id"),
+			urls: Himotoki.decode(e.rawValue),
+			type: e.value("type"),
+			siteAdmin: e.value("site_admin")
 		)
 	}
 }
@@ -74,20 +73,20 @@ extension GistUser.URLs : Decodable {
 	
 	public static func decode(e: Extractor) throws -> GistUser.URLs {
 
-		return try build(GistUser.URLs.init)(
+		return try GistUser.URLs(
 		
-			e <| "avatar_url",
-			e <| "url",
-			e <| "html_url",
-			e <| "followers_url",
-			e <| "following_url",
-			e <| "gists_url",
-			e <| "starred_url",
-			e <| "subscriptions_url",
-			e <| "organizations_url",
-			e <| "repos_url",
-			e <| "events_url",
-			e <| "received_events_url"
+			avatarUrl: e.value("avatar_url"),
+			url: e.value("url"),
+			htmlUrl: e.value("html_url"),
+			followersUrl: e.value("followers_url"),
+			followingUrl: e.value("following_url"),
+			gistsUrl: e.value("gists_url"),
+			starredUrl: e.value("starred_url"),
+			subscriptionsUrl: e.value("subscriptions_url"),
+			organizationsUrl: e.value("organizations_url"),
+			reposUrl: e.value("repos_url"),
+			eventsUrl: e.value("events_url"),
+			receivedEventsUrl: e.value("received_events_url")
 		
 		)
 	}

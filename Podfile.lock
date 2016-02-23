@@ -1,6 +1,6 @@
 PODS:
-  - APIKit (1.0.0-beta.9):
-    - Result (~> 0.6-beta.1)
+  - APIKit (1.1.3):
+    - Result (~> 1.0.1)
   - ESActiveCounter (0.1.4):
     - ESNotification (~> 0.2.0)
   - ESAppKitExtension (0.1.1)
@@ -14,18 +14,18 @@ PODS:
     - ESAppKitExtension (~> 0.1.1)
     - ESCoreGraphicsExtension (~> 0.1.2)
   - ESTestKit (0.3.3)
-  - ESThread (0.1.0)
-  - Himotoki (1.1.2)
+  - ESThread (0.1.1)
+  - Himotoki (1.5.0)
   - Ocean (1.4.0):
     - ESActiveCounter (~> 0.1.4)
     - ESAppKitExtension (~> 0.1.1)
     - ESCoreGraphicsExtension (~> 0.1.3)
     - ESNotification (~> 0.2.0)
     - ESProgressHUD (~> 0.1.2)
-    - ESThread (~> 0.1.0)
-    - Swim (~> 1.4.0)
-  - Result (0.6.0-beta.4)
-  - Swim (1.4.1-beta)
+    - ESThread (~> 0.1.1)
+    - Swim
+  - Result (1.0.2)
+  - Swim (1.4.1-beta2)
 
 DEPENDENCIES:
   - APIKit (from `https://github.com/ishkawa/APIKit.git`, branch `master`)
@@ -54,30 +54,32 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APIKit:
-    :commit: 392844f954ce9ee22f08616bab53e16881e6a26b
+    :commit: ea6006ce87c3c87a6fdaaf5b3bc42653445a2721
     :git: https://github.com/ishkawa/APIKit.git
   Himotoki:
-    :commit: 93fbc1ae9af9280a8637402b53b4aa8f138c63e8
+    :commit: e56b1a1631754839fd8543af0d374822baaedaab
     :git: https://github.com/ikesyo/Himotoki.git
   Ocean:
-    :commit: 1234aac116cd1903ac386a760d23f456fc3fdbaf
+    :commit: ecdd85a3b558ce8c8cf5e89f8483a4222cd65b86
     :git: https://github.com/EZ-NET/ESOcean
   Swim:
-    :commit: 843cc1aa5d019da000c0f0e9091b654e11e08fe0
+    :commit: 89512d28d008753cbfd3b4d5ea8251a1c259f474
     :git: https://github.com/EZ-NET/ESSwim
 
 SPEC CHECKSUMS:
-  APIKit: 7df2a96c962a65411e37e6da2e0d3ef0b4bb6c4b
+  APIKit: 6e6e651405e8c691a1875f36ab730e23c3ca134a
   ESActiveCounter: 222f94afbe6cd9276eaadf142c88c4ea1a8750b8
   ESAppKitExtension: 3bc92382a286d8ed531c0f2e9e1a0356cae9457c
   ESCoreGraphicsExtension: 187eae3d0bec6a1f6328956305cd9a61fdd6b183
   ESNotification: 3e170ba46dbc40d8beda64027038effc7910deab
   ESProgressHUD: 1ce6537e3813cd96d8fb81ae34d859cd5bd2fad2
   ESTestKit: 4e613c869c0bcd8012282b03805f072a932ccf3b
-  ESThread: aa7f1d3e412716cef6c62e116a1da761449f5e48
-  Himotoki: 688cbaff084dd1ef44c4eb37222f4a92ecc4a70b
-  Ocean: f6eeb71ff6df0693660ddb4524a2ee7ff43d7530
-  Result: f7927152cbaec0c043abb06ba0bc432678818418
-  Swim: 5d6b294188fd7ecde95450ca3e45e9d6db7df470
+  ESThread: 7fb6c2f9d3a263cf5c719d1f8f555093eebbcc6c
+  Himotoki: 7506d0a42c59ca4f7e348f22aee89e22c76c5711
+  Ocean: 53918cd843bc44547cf92356f9ac2bcd90484fb5
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  Swim: cd5145c6d96b34c4ee60dfd5a7cdfe39fc2fd43c
 
-COCOAPODS: 0.39.0.beta.5
+PODFILE CHECKSUM: c4fea700c715df1bd5ff5941e3ca5f25bc03334f
+
+COCOAPODS: 1.0.0.beta.2
