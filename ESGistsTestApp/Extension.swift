@@ -101,6 +101,9 @@ extension DecodeError : CustomDebugStringConvertible {
             
         case let .TypeMismatch(expected: expected, actual: actual, keyPath: keypath):
             return "Failed to decode. Expected type '\(expected)' but '\(actual)'" + (keypath.map { " in \($0)" } ?? "") + " is not match."
+			
+		case let .Custom(message):
+			return "Failed to decode because \(message)"
         }
     }
 }

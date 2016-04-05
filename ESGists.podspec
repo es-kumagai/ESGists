@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ESGists"
-  s.version      = "0.1.4-beta.4"
+  s.version      = "0.1.5"
   s.summary      = "This module is a small set of Gists API client for EZ-NET CodePiece."
 
   s.description  = <<-DESC
@@ -21,15 +21,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/EZ-NET/ESGists.git", :tag => s.version }
   s.source_files  = "ESGists/**/*.swift"
 
-  s.dependency  'Swim', '~> 1.4.0'
   s.dependency  'Ocean', '~> 1.4.0'
-  s.dependency  'ESThread', '~> 0.1.0'
-  s.dependency  'ESActiveCounter', '~> 0.1.4'
-  s.dependency  'ESCoreGraphicsExtension', '~> 0.1.3'
-  s.dependency  'ESNotification', '~> 0.2.4'
 
-  s.dependency  'APIKit', '>= 1.1.2'
-  s.dependency  'Himotoki', '>= 1.5.0'
+  s.dependency  'APIKit', '~> 1.3.0'
+  s.dependency  'Himotoki', '~> 1.7.0'
 
   s.osx.dependency  'ESAppKitExtension', '~> 0.1.1'
 

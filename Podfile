@@ -1,18 +1,18 @@
-source 'https://github.com/EZ-NET/PodSpecs.git'
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/EZ-NET/PodSpecs.git'
 
 use_frameworks!
 
 def pods
 
-	pod 'APIKit', '>= 1.1.2'
-	pod 'Himotoki', '>= 1.5.0'
-	pod 'Swim', :git => 'https://github.com/EZ-NET/ESSwim', :branch => 'master'
-	pod 'Ocean', :git => 'https://github.com/EZ-NET/ESOcean', :branch => 'master'
-	pod 'ESThread', '~> 0.1.0'
-	pod 'ESActiveCounter', '~> 0.1.4'
-	pod 'ESCoreGraphicsExtension', '~> 0.1.3'
-	pod 'ESNotification', '~> 0.2.0'
+	pod 'APIKit'
+	pod 'Himotoki'
+	pod 'Swim'
+	pod 'Ocean'
+	pod 'ESThread'
+	pod 'ESActiveCounter'
+	pod 'ESCoreGraphicsExtension'
+	pod 'ESNotification'
 
 end
 
@@ -22,7 +22,7 @@ end
 
 def pods_osx
 
-	pod 'ESAppKitExtension', '~> 0.1.1'
+	pod 'ESAppKitExtension'
 
 end
 
