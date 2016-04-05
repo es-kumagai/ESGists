@@ -24,18 +24,18 @@ class IDTests: XCTestCase {
         super.tearDown()
     }
 
-    func testArchive() {
-		
-		let value = UIntMax.max - 10000
-		
-		let id = ESGists.ID(value)
-		
-		let data = id.archivableData
-		let archivedData = NSKeyedArchiver.archivedDataWithRootObject(data)
-		let unarchivdData = NSKeyedUnarchiver.unarchiveObjectWithData(archivedData)
-		let unarchivedIdWrapped = unarchivdData as? Archivable<ESGists.ID>
-		let unarchivedId = unarchivedIdWrapped!.data
-		
-		expected().equal(id, unarchivedId)
-    }
+//    func testArchive() {
+//		
+//		let value = UIntMax.max - 10000
+//		
+//		let id = ESGists.ID(value)
+//		
+//		let data = id.archivableData
+//		let archivedData = NSKeyedArchiver.archivedDataWithRootObject(data)
+//		let unarchivdData = NSKeyedUnarchiver.unarchiveObjectWithData(archivedData)
+//		let unarchivedIdWrapped = unarchivdData as? Archivable<ESGists.ID>
+//		let unarchivedId = unarchivedIdWrapped!.data
+//		
+//		expected().equal(id, unarchivedId)
+//    }
 }
