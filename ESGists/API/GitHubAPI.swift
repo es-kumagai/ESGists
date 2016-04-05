@@ -20,7 +20,7 @@ public protocol GitHubRequest : RequestType {
 
 public protocol RequestWithAuthentication : RequestType {
 
-	typealias Auth : Authorization
+	associatedtype Auth : Authorization
 
 	var authorization:Auth { get }
 }

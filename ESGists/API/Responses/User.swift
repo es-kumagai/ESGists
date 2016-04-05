@@ -62,7 +62,7 @@ extension GistUser : Decodable {
 			id: e.value("id"),
 			name: e.valueOptional("name"),
 			gravatarId: e.value("gravatar_id"),
-			urls: Himotoki.decode(e.rawValue),
+			urls: decodeValue(e.rawValue),
 			type: e.value("type"),
 			siteAdmin: e.value("site_admin")
 		)

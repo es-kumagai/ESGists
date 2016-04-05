@@ -20,7 +20,7 @@ extension GistCreated : Decodable {
 		
 		return try GistCreated(
 
-			gist: Himotoki.decode(e.rawValue),
+			gist: decodeValue(e.rawValue),
 			history: e.array("history")
 		
 		)

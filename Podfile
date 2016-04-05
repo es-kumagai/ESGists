@@ -18,10 +18,13 @@ end
 
 def pods_ios
 
+	pods
+
 end
 
 def pods_osx
 
+	pods
 	pod 'ESAppKitExtension'
 
 end
@@ -37,7 +40,6 @@ target :ESGists_OSX do
 
 	platform :osx, '10.9'
 
-	pods
 	pods_osx
 
 end
@@ -46,14 +48,13 @@ target :ESGists_iOS do
 
 	platform :ios, '8.0'
 
-	pods
 	pods_ios
 
 end
 
 target :ESGists_OSXTests do
 	
-	platform :osx, '10.10'
+	platform :osx, '10.9'
 	
 	pods_osx
 	pods_test
@@ -62,7 +63,7 @@ end
 
 target :ESGists_iOSTests do
 	
-	platform :ios, '9.0'
+	platform :ios, '8.0'
 
 	pods_ios
 	pods_test
@@ -71,7 +72,7 @@ end
 
 target :ESGistsTestApp do
 	
-	platform :ios, '8.3'
+	platform :ios, '8.0'
 	
 	pods
 	pods_ios

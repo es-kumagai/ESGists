@@ -67,7 +67,7 @@ extension AuthorizationResponse : Decodable {
 			app: e.value("app"),
 			note: e.valueOptional("note"),
 			noteUrl: e.valueOptional("note_url"),
-			timestamp: Himotoki.decode(e.rawValue),
+			timestamp: decodeValue(e.rawValue),
 			fingerprint: e.valueOptional("fingerprint")
 		)
 	}

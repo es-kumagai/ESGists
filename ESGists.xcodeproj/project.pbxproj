@@ -79,6 +79,8 @@
 		B13C98DB1B7088E700A5A2B3 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */; };
 		B13C98DC1B7088E700A5A2B3 /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C98DA1B7088E700A5A2B3 /* LanguageType.swift */; };
 		B152E2871B6EC9D4008B485A /* SampleAccount.plist in Resources */ = {isa = PBXBuildFile; fileRef = B152E2861B6EC9D4008B485A /* SampleAccount.plist */; };
+		B1A641531CB37DB7008FD8B2 /* ESAppKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A641491CB3752F008FD8B2 /* ESAppKitExtension.framework */; };
+		B1A641541CB37DBE008FD8B2 /* ESAppKitExtension.framework in Embed Frameworks for Test */ = {isa = PBXBuildFile; fileRef = B1A641491CB3752F008FD8B2 /* ESAppKitExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1BD64E21B7B76C1002DFDD0 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD64E11B7B76C1002DFDD0 /* UsersAPI.swift */; };
 		B1BD64E31B7B76C1002DFDD0 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD64E11B7B76C1002DFDD0 /* UsersAPI.swift */; };
 		B1BD64E71B7B796F002DFDD0 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BD64E61B7B796F002DFDD0 /* Users.storyboard */; };
@@ -115,6 +117,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B1A6414B1CB37544008FD8B2 /* Embed Frameworks for Test */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1A641541CB37DBE008FD8B2 /* ESAppKitExtension.framework in Embed Frameworks for Test */,
+			);
+			name = "Embed Frameworks for Test";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1BD64EE1B7B7A2F002DFDD0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +210,7 @@
 		B13C98EB1B70D75D00A5A2B3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B152E2861B6EC9D4008B485A /* SampleAccount.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SampleAccount.plist; path = Private/SampleAccount.plist; sourceTree = "<group>"; };
 		B152E2881B6ECBE2008B485A /* ESGists.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ESGists.podspec; sourceTree = "<group>"; };
+		B1A641491CB3752F008FD8B2 /* ESAppKitExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESAppKitExtension.framework; path = "../../../../Volumes/UserData/Home/tomohiro/Library/Developer/Xcode/DerivedData/ESGists-bkutjhwujyangrdmxgpnhrniohgd/Build/Products/Debug/ESAppKitExtension/ESAppKitExtension.framework"; sourceTree = "<group>"; };
 		B1BD64E11B7B76C1002DFDD0 /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		B1BD64E61B7B796F002DFDD0 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
 		B1BD64E81B7B797F002DFDD0 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A641531CB37DB7008FD8B2 /* ESAppKitExtension.framework in Frameworks */,
 				B109439C1B6EC39A00FABE17 /* ESGists.framework in Frameworks */,
 				8F5832DA9ECC37B8374C77B2 /* Pods_ESGists_OSXTests.framework in Frameworks */,
 			);
@@ -274,6 +289,7 @@
 		58A71A2049CB745EF57DB7DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1A641491CB3752F008FD8B2 /* ESAppKitExtension.framework */,
 				A8C175D2695862B42C4CE3E5 /* Pods_ESGistsTestApp.framework */,
 				52BEBDDA196045724C39A5F5 /* Pods_ESGists_OSX.framework */,
 				20962B502C4FA4454437AE04 /* Pods_ESGists_OSXTests.framework */,
@@ -541,6 +557,7 @@
 				B10943991B6EC39A00FABE17 /* Resources */,
 				B3A340CCDD3D1892B0C6C8C8 /* 📦 Embed Pods Frameworks */,
 				0E9F22F637EF46BDE5D83178 /* 📦 Copy Pods Resources */,
+				B1A6414B1CB37544008FD8B2 /* Embed Frameworks for Test */,
 			);
 			buildRules = (
 			);

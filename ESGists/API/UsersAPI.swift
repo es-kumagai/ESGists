@@ -51,7 +51,7 @@ extension GitHubAPI {
 				
                 do {
 
-                    return try decode(object) as GistUser
+                    return try decodeValue(object) as GistUser
                 }
                 catch {
                     
@@ -64,7 +64,7 @@ extension GitHubAPI {
                 
                 do {
 
-                    return try decode(object) as GistError
+                    return try decodeValue(object) as GistError
                 }
                 catch {
                     
@@ -90,7 +90,7 @@ extension GitHubAPI {
 				
                 do {
 
-                    return try decode(object) as GistUser
+                    return try decodeValue(object) as GistUser
                 }
                 catch {
                     
@@ -103,7 +103,7 @@ extension GitHubAPI {
                 
                 do {
 
-                    return try decode(object) as GistError
+                    return try decodeValue(object) as GistError
                 }
                 catch {
                     

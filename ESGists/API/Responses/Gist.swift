@@ -75,8 +75,8 @@ extension Gist : Decodable {
 			user: e.valueOptional("user"),
 			files: e.dictionary("files"),
 			commentCount: e.value("comments"),
-			timestamp: Himotoki.decode(e.rawValue),
-			urls: Himotoki.decode(e.rawValue)
+			timestamp: Himotoki.decodeValue(e.rawValue),
+			urls: decodeValue(e.rawValue)
 		)
 	}
 }

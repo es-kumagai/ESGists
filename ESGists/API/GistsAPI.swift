@@ -84,7 +84,7 @@ extension GitHubAPI {
                 
                 do {
 
-                    return try decode(object) as GistError
+                    return try decodeValue(object) as GistError
                 }
                 catch {
                     
@@ -132,7 +132,7 @@ extension GitHubAPI {
 				
                 do {
 
-                    return try decode(object) as GistCreated
+                    return try decodeValue(object) as GistCreated
                 }
                 catch {
                     
@@ -145,7 +145,7 @@ extension GitHubAPI {
                 
                 do {
 
-                    return try decode(object) as GistError
+                    return try decodeValue(object) as GistError
                 }
                 catch {
                     
