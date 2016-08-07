@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ESGists"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "This module is a small set of Gists API client for EZ-NET CodePiece."
 
   s.description  = <<-DESC
