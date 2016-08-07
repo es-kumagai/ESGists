@@ -64,3 +64,11 @@ extension PopularLanguage : LanguageType {
 		return language
 	}
 }
+
+extension Language {
+	
+	public init(_ popularLanguage: PopularLanguage) {
+		
+		self = popularLanguage.language
+	}
+}
