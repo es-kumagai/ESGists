@@ -183,7 +183,7 @@ public enum Language : String {
 //	case JSONLD
 //	case Julia
 //	case Kit
-//	case Kotlin
+	case Kotlin
 //	case KRL
 //	case LabVIEW
 //	case Lasso
@@ -671,7 +671,8 @@ extension Language : LanguageType {
 //		case JSONLD
 //		case Julia
 //		case Kit
-//		case Kotlin
+		case Kotlin:
+			return "kt"
 //		case KRL
 //		case LabVIEW
 //		case Lasso

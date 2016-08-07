@@ -263,6 +263,10 @@ internal func _getAllLanguage() -> Set<Language> {
 		result.append(.Text)
 		fallthrough
 		
+	case (.Kotlin, .None):
+		result.append(.Kotlin)
+		fallthrough
+		
 	case (_, .Some):
 		break
 	}
