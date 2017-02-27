@@ -3,4 +3,5 @@ xcuserdata
 xcshareddata
 /Private
 /Pods
-
+Modules/Packages
+Modules/.build

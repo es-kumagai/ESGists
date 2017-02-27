@@ -7,9 +7,6 @@ def pods
 
 	pod 'APIKit'
 	pod 'Himotoki'
-	pod 'Swim'
-	pod 'Ocean'
-	pod 'ESThread'
 	pod 'ESActiveCounter'
 	pod 'ESCoreGraphicsExtension'
 	pod 'ESNotification'
@@ -32,7 +29,6 @@ end
 def pods_test
 
 	pods
-	pod 'ESTestKit'
 
 end
 

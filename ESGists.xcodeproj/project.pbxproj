@@ -88,6 +88,18 @@
 		B1BD64EA1B7B7A2F002DFDD0 /* ESGists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10943AE1B6EC3AA00FABE17 /* ESGists.framework */; };
 		B1BD64EB1B7B7A2F002DFDD0 /* ESGists.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B10943AE1B6EC3AA00FABE17 /* ESGists.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1BD64F01B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BD64EF1B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift */; };
+		B1F6F3971E2A4AEC0012828C /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3611E2A4AEC0012828C /* Package.swift */; };
+		B1F6F3981E2A4AEC0012828C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B1F6F3641E2A4AEC0012828C /* .gitignore */; };
+		B1F6F3991E2A4AEC0012828C /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3651E2A4AEC0012828C /* Package.swift */; };
+		B1F6F39A1E2A4AEC0012828C /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3671E2A4AEC0012828C /* Ocean.swift */; };
+		B1F6F39B1E2A4AEC0012828C /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3691E2A4AEC0012828C /* LinuxMain.swift */; };
+		B1F6F39C1E2A4AEC0012828C /* OceanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F36B1E2A4AEC0012828C /* OceanTests.swift */; };
+		B1F6F39D1E2A4AEC0012828C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B1F6F36D1E2A4AEC0012828C /* .gitignore */; };
+		B1F6F39E1E2A4AEC0012828C /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F36E1E2A4AEC0012828C /* Package.swift */; };
+		B1F6F39F1E2A4AEC0012828C /* Swim.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3701E2A4AEC0012828C /* Swim.swift */; };
+		B1F6F3A01E2A4AEC0012828C /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3721E2A4AEC0012828C /* LinuxMain.swift */; };
+		B1F6F3A11E2A4AEC0012828C /* SwimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3741E2A4AEC0012828C /* SwimTests.swift */; };
+		B1F6F3A21E2A4AEC0012828C /* ESGistsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6F3761E2A4AEC0012828C /* ESGistsModule.swift */; };
 		B3E5F067156549CFA392BF5B /* Pods_ESGists_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BEBDDA196045724C39A5F5 /* Pods_ESGists_OSX.framework */; };
 		BFD353852536593360C694FF /* Pods_ESGistsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C175D2695862B42C4CE3E5 /* Pods_ESGistsTestApp.framework */; };
 /* End PBXBuildFile section */
@@ -216,6 +228,18 @@
 		B1BD64E81B7B797F002DFDD0 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		B1BD64EF1B7B86DB002DFDD0 /* AuthenticatedUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserViewController.swift; sourceTree = "<group>"; };
 		B1CDF9384EC93D1B93D49725 /* Pods-ESGists_OSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_OSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_OSXTests/Pods-ESGists_OSXTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1F6F3611E2A4AEC0012828C /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		B1F6F3641E2A4AEC0012828C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B1F6F3651E2A4AEC0012828C /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		B1F6F3671E2A4AEC0012828C /* Ocean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
+		B1F6F3691E2A4AEC0012828C /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		B1F6F36B1E2A4AEC0012828C /* OceanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceanTests.swift; sourceTree = "<group>"; };
+		B1F6F36D1E2A4AEC0012828C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B1F6F36E1E2A4AEC0012828C /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		B1F6F3701E2A4AEC0012828C /* Swim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swim.swift; sourceTree = "<group>"; };
+		B1F6F3721E2A4AEC0012828C /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		B1F6F3741E2A4AEC0012828C /* SwimTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwimTests.swift; sourceTree = "<group>"; };
+		B1F6F3761E2A4AEC0012828C /* ESGistsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESGistsModule.swift; sourceTree = "<group>"; };
 		B2259C1B3BBCB9F67006EE1E /* Pods-ESGists_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_iOSTests/Pods-ESGists_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B303858364597FC24F6CDA53 /* Pods-ESGists_OSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESGists_OSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESGists_OSXTests/Pods-ESGists_OSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B310AA34814A797DD3806496 /* Pods_ESGists_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESGists_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,6 +326,7 @@
 		B10943691B6EC37A00FABE17 = {
 			isa = PBXGroup;
 			children = (
+				B1F6F33A1E2A4AEC0012828C /* Modules */,
 				B10943E91B6EC45100FABE17 /* Podfile */,
 				B152E2881B6ECBE2008B485A /* ESGists.podspec */,
 				B13C98EB1B70D75D00A5A2B3 /* LICENSE */,
@@ -505,6 +530,113 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		B1F6F33A1E2A4AEC0012828C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3611E2A4AEC0012828C /* Package.swift */,
+				B1F6F3621E2A4AEC0012828C /* Packages */,
+				B1F6F3751E2A4AEC0012828C /* Sources */,
+				B1F6F3771E2A4AEC0012828C /* Tests */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B1F6F3621E2A4AEC0012828C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3631E2A4AEC0012828C /* Ocean-0.1.0 */,
+				B1F6F36C1E2A4AEC0012828C /* Swim-0.1.0 */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		B1F6F3631E2A4AEC0012828C /* Ocean-0.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3641E2A4AEC0012828C /* .gitignore */,
+				B1F6F3651E2A4AEC0012828C /* Package.swift */,
+				B1F6F3661E2A4AEC0012828C /* Sources */,
+				B1F6F3681E2A4AEC0012828C /* Tests */,
+			);
+			path = "Ocean-0.1.0";
+			sourceTree = "<group>";
+		};
+		B1F6F3661E2A4AEC0012828C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3671E2A4AEC0012828C /* Ocean.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1F6F3681E2A4AEC0012828C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3691E2A4AEC0012828C /* LinuxMain.swift */,
+				B1F6F36A1E2A4AEC0012828C /* OceanTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B1F6F36A1E2A4AEC0012828C /* OceanTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F36B1E2A4AEC0012828C /* OceanTests.swift */,
+			);
+			path = OceanTests;
+			sourceTree = "<group>";
+		};
+		B1F6F36C1E2A4AEC0012828C /* Swim-0.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F36D1E2A4AEC0012828C /* .gitignore */,
+				B1F6F36E1E2A4AEC0012828C /* Package.swift */,
+				B1F6F36F1E2A4AEC0012828C /* Sources */,
+				B1F6F3711E2A4AEC0012828C /* Tests */,
+			);
+			path = "Swim-0.1.0";
+			sourceTree = "<group>";
+		};
+		B1F6F36F1E2A4AEC0012828C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3701E2A4AEC0012828C /* Swim.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1F6F3711E2A4AEC0012828C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3721E2A4AEC0012828C /* LinuxMain.swift */,
+				B1F6F3731E2A4AEC0012828C /* SwimTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B1F6F3731E2A4AEC0012828C /* SwimTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3741E2A4AEC0012828C /* SwimTests.swift */,
+			);
+			path = SwimTests;
+			sourceTree = "<group>";
+		};
+		B1F6F3751E2A4AEC0012828C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6F3761E2A4AEC0012828C /* ESGistsModule.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1F6F3771E2A4AEC0012828C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -531,12 +663,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10943A31B6EC39A00FABE17 /* Build configuration list for PBXNativeTarget "ESGists_OSX" */;
 			buildPhases = (
-				A105BACBA06956FD8464EF2E /* 📦 Check Pods Manifest.lock */,
+				A105BACBA06956FD8464EF2E /* [CP] Check Pods Manifest.lock */,
 				B109438D1B6EC39A00FABE17 /* Sources */,
 				B109438E1B6EC39A00FABE17 /* Frameworks */,
 				B109438F1B6EC39A00FABE17 /* Headers */,
 				B10943901B6EC39A00FABE17 /* Resources */,
-				9ECEE2148340989BF9B2E0B1 /* 📦 Copy Pods Resources */,
+				9ECEE2148340989BF9B2E0B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -551,12 +683,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10943A61B6EC39A00FABE17 /* Build configuration list for PBXNativeTarget "ESGists_OSXTests" */;
 			buildPhases = (
-				6797651DF781A27FD9064B25 /* 📦 Check Pods Manifest.lock */,
+				6797651DF781A27FD9064B25 /* [CP] Check Pods Manifest.lock */,
 				B10943971B6EC39A00FABE17 /* Sources */,
 				B10943981B6EC39A00FABE17 /* Frameworks */,
 				B10943991B6EC39A00FABE17 /* Resources */,
-				B3A340CCDD3D1892B0C6C8C8 /* 📦 Embed Pods Frameworks */,
-				0E9F22F637EF46BDE5D83178 /* 📦 Copy Pods Resources */,
+				B3A340CCDD3D1892B0C6C8C8 /* [CP] Embed Pods Frameworks */,
+				0E9F22F637EF46BDE5D83178 /* [CP] Copy Pods Resources */,
 				B1A6414B1CB37544008FD8B2 /* Embed Frameworks for Test */,
 			);
 			buildRules = (
@@ -573,12 +705,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10943BF1B6EC3AA00FABE17 /* Build configuration list for PBXNativeTarget "ESGists_iOS" */;
 			buildPhases = (
-				0467E2316C921EAE1E488A19 /* 📦 Check Pods Manifest.lock */,
+				0467E2316C921EAE1E488A19 /* [CP] Check Pods Manifest.lock */,
 				B10943A91B6EC3AA00FABE17 /* Sources */,
 				B10943AA1B6EC3AA00FABE17 /* Frameworks */,
 				B10943AB1B6EC3AA00FABE17 /* Headers */,
 				B10943AC1B6EC3AA00FABE17 /* Resources */,
-				1A3FACA9BCA504F2B9D17B8D /* 📦 Copy Pods Resources */,
+				1A3FACA9BCA504F2B9D17B8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -593,12 +725,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10943C21B6EC3AA00FABE17 /* Build configuration list for PBXNativeTarget "ESGists_iOSTests" */;
 			buildPhases = (
-				942D4FB3F4646B63F39FFE38 /* 📦 Check Pods Manifest.lock */,
+				942D4FB3F4646B63F39FFE38 /* [CP] Check Pods Manifest.lock */,
 				B10943B31B6EC3AA00FABE17 /* Sources */,
 				B10943B41B6EC3AA00FABE17 /* Frameworks */,
 				B10943B51B6EC3AA00FABE17 /* Resources */,
-				23067DB457958CBA125A1BDC /* 📦 Embed Pods Frameworks */,
-				E7800A3D0AF6AB384C397280 /* 📦 Copy Pods Resources */,
+				23067DB457958CBA125A1BDC /* [CP] Embed Pods Frameworks */,
+				E7800A3D0AF6AB384C397280 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -614,13 +746,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10943E31B6EC3C400FABE17 /* Build configuration list for PBXNativeTarget "ESGistsTestApp" */;
 			buildPhases = (
-				96F19D50A4488B373AEC04C5 /* 📦 Check Pods Manifest.lock */,
+				96F19D50A4488B373AEC04C5 /* [CP] Check Pods Manifest.lock */,
 				B10943C51B6EC3C300FABE17 /* Sources */,
 				B10943C61B6EC3C300FABE17 /* Frameworks */,
 				B10943C71B6EC3C300FABE17 /* Resources */,
 				B1BD64EE1B7B7A2F002DFDD0 /* Embed Frameworks */,
-				D1E064718320EAC2A62DF06F /* 📦 Embed Pods Frameworks */,
-				8556BFC3D3573CC922541EDB /* 📦 Copy Pods Resources */,
+				D1E064718320EAC2A62DF06F /* [CP] Embed Pods Frameworks */,
+				8556BFC3D3573CC922541EDB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -685,6 +817,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F6F3981E2A4AEC0012828C /* .gitignore in Resources */,
+				B1F6F39D1E2A4AEC0012828C /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,29 +862,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0467E2316C921EAE1E488A19 /* 📦 Check Pods Manifest.lock */ = {
+		0467E2316C921EAE1E488A19 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		0E9F22F637EF46BDE5D83178 /* 📦 Copy Pods Resources */ = {
+		0E9F22F637EF46BDE5D83178 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -758,14 +892,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ESGists_OSXTests/Pods-ESGists_OSXTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1A3FACA9BCA504F2B9D17B8D /* 📦 Copy Pods Resources */ = {
+		1A3FACA9BCA504F2B9D17B8D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,14 +907,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ESGists_iOS/Pods-ESGists_iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		23067DB457958CBA125A1BDC /* 📦 Embed Pods Frameworks */ = {
+		23067DB457958CBA125A1BDC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,29 +922,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ESGists_iOSTests/Pods-ESGists_iOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6797651DF781A27FD9064B25 /* 📦 Check Pods Manifest.lock */ = {
+		6797651DF781A27FD9064B25 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8556BFC3D3573CC922541EDB /* 📦 Copy Pods Resources */ = {
+		8556BFC3D3573CC922541EDB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -818,44 +952,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ESGistsTestApp/Pods-ESGistsTestApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		942D4FB3F4646B63F39FFE38 /* 📦 Check Pods Manifest.lock */ = {
+		942D4FB3F4646B63F39FFE38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		96F19D50A4488B373AEC04C5 /* 📦 Check Pods Manifest.lock */ = {
+		96F19D50A4488B373AEC04C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9ECEE2148340989BF9B2E0B1 /* 📦 Copy Pods Resources */ = {
+		9ECEE2148340989BF9B2E0B1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,29 +997,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ESGists_OSX/Pods-ESGists_OSX-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A105BACBA06956FD8464EF2E /* 📦 Check Pods Manifest.lock */ = {
+		A105BACBA06956FD8464EF2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B3A340CCDD3D1892B0C6C8C8 /* 📦 Embed Pods Frameworks */ = {
+		B3A340CCDD3D1892B0C6C8C8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -893,14 +1027,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ESGists_OSXTests/Pods-ESGists_OSXTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D1E064718320EAC2A62DF06F /* 📦 Embed Pods Frameworks */ = {
+		D1E064718320EAC2A62DF06F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,14 +1042,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ESGistsTestApp/Pods-ESGistsTestApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7800A3D0AF6AB384C397280 /* 📦 Copy Pods Resources */ = {
+		E7800A3D0AF6AB384C397280 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -930,17 +1064,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F6F39A1E2A4AEC0012828C /* Ocean.swift in Sources */,
 				B109440C1B6EC53000FABE17 /* JSONObject.swift in Sources */,
 				B10944061B6EC53000FABE17 /* AuthorizationsAPI.swift in Sources */,
 				B109441A1B6EC53000FABE17 /* GistHistory.swift in Sources */,
 				B13C98DB1B7088E700A5A2B3 /* LanguageType.swift in Sources */,
+				B1F6F39F1E2A4AEC0012828C /* Swim.swift in Sources */,
 				B10944161B6EC53000FABE17 /* Gist.swift in Sources */,
 				B10944241B6EC53000FABE17 /* User.swift in Sources */,
 				B109440A1B6EC53000FABE17 /* GitHubAPI.swift in Sources */,
+				B1F6F3A01E2A4AEC0012828C /* LinuxMain.swift in Sources */,
 				B10944221B6EC53000FABE17 /* URL.swift in Sources */,
 				B13C98CD1B70651900A5A2B3 /* PopularLanguage.swift in Sources */,
+				B1F6F39B1E2A4AEC0012828C /* LinuxMain.swift in Sources */,
 				B10944141B6EC53000FABE17 /* Date.swift in Sources */,
 				B10944261B6EC53000FABE17 /* Language.swift in Sources */,
+				B1F6F3971E2A4AEC0012828C /* Package.swift in Sources */,
 				B109441E1B6EC53000FABE17 /* OAuthAppInfo.swift in Sources */,
 				B10944201B6EC53000FABE17 /* OAuthToken.swift in Sources */,
 				B1BD64E21B7B76C1002DFDD0 /* UsersAPI.swift in Sources */,
@@ -948,8 +1087,13 @@
 				B10944081B6EC53000FABE17 /* GistsAPI.swift in Sources */,
 				B10944101B6EC53000FABE17 /* Scope.swift in Sources */,
 				B109441C1B6EC53000FABE17 /* ID.swift in Sources */,
+				B1F6F39E1E2A4AEC0012828C /* Package.swift in Sources */,
+				B1F6F3991E2A4AEC0012828C /* Package.swift in Sources */,
+				B1F6F3A11E2A4AEC0012828C /* SwimTests.swift in Sources */,
+				B1F6F39C1E2A4AEC0012828C /* OceanTests.swift in Sources */,
 				B10944121B6EC53000FABE17 /* AuthorizationResponse.swift in Sources */,
 				B13C98D51B70734500A5A2B3 /* LanguageSet.swift in Sources */,
+				B1F6F3A21E2A4AEC0012828C /* ESGistsModule.swift in Sources */,
 				B109440E1B6EC53000FABE17 /* RequestFile.swift in Sources */,
 				B10944181B6EC53000FABE17 /* GistCreated.swift in Sources */,
 			);
@@ -1076,6 +1220,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "Modules/.build/$(CONFIGURATION)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1123,6 +1268,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "Modules/.build/$(CONFIGURATION)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
