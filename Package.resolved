@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "APIKit",
+        "repositoryURL": "https://github.com/ishkawa/APIKit",
+        "state": {
+          "branch": null,
+          "revision": "862a8f80dd117693750c6ddaba2fe6a85b061a9a",
+          "version": "5.0.0"
+        }
+      },
+      {
+        "package": "Himotoki",
+        "repositoryURL": "https://github.com/ikesyo/Himotoki",
+        "state": {
+          "branch": null,
+          "revision": "58736bd328e218b4080b034d19211f0263e29b45",
+          "version": "4.0.0"
+        }
+      },
+      {
+        "package": "Ocean",
+        "repositoryURL": "https://github.com/es-kumagai/Ocean",
+        "state": {
+          "branch": "master",
+          "revision": "4432bc0165ec55db576e2179dbb94a35a67fa47c",
+          "version": null
+        }
+      },
+      {
+        "package": "Swim",
+        "repositoryURL": "https://github.com/es-kumagai/Swim",
+        "state": {
+          "branch": "master",
+          "revision": "36b493ee8bb65c90fe1ac327d7a8aea7251e8918",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
