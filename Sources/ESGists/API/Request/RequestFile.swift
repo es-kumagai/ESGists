@@ -11,3 +11,11 @@ public struct GistFile : Codable {
 	public var name: String
 	public var content: Array<String>
 }
+
+extension GistFile : JSONObjectConvertible {
+    
+    public func toJSON() -> Dictionary<String, Any> {
+        
+        [ name : content.toJSON() ]
+    }
+}

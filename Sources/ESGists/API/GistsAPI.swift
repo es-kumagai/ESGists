@@ -7,21 +7,24 @@
 //
 
 import APIKit
+import Foundation
+
+private let jsonDecoder = JSONDecoder()
 
 /*!
 Gists API
 https://developer.github.com/v3/gists/
 */
 
-public protocol GistsRequest : RequestType {
+public protocol GistsRequest : Request {
 	
 }
 
 extension GistsRequest {
 	
-	public var baseURL:NSURL {
+    public var baseURL: Foundation.URL {
 		
-		return NSURL(string: "https://api.github.com/gists")!
+        return Foundation.URL(string: "https://api.github.com/gists")!
 	}
 }
 
@@ -31,22 +34,21 @@ extension GitHubAPI {
 		
 		public struct ListUsersGists : GitHubRequest {
 			
-			public let method:HTTPMethod = .GET
-			public let acceptableStatusCodes:Set<Int> = [ 200 ]
+			public let method: HTTPMethod = .get
 			
-			public var username:String
-			public var since:ISO8601Date?
+			public var username: String
+			public var since: ISO8601Date?
 
 			public var path:String {
 				
 				return "/users/\(self.username)/gists"
 			}
 			
-			public var parameters:[String:AnyObject] {
+			public var parameters: Dictionary<String, Any> {
 				
 				if let since = self.since {
 					
-					return [ "since" : since.ISO8601String ]
+					return [ "since" : since.iso8601String ]
 				}
 				else {
 					
@@ -54,57 +56,46 @@ extension GitHubAPI {
 				}
 			}
 			
-			public init(username:String) {
+			public init(username: String) {
 			
 				self.username = username
 				self.since = nil
 			}
 			
-			public init(username:String, since:ISO8601Date) {
+			public init(username: String, since: ISO8601Date) {
 
 				self.username = username
 				self.since = since
 			}
 			
-			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> [Gist]? {
+			public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [Gist] {
 				
-                do {
-
-                    return try decodeArray(object) as [Gist]
-                }
-                catch {
-                    
-                    NSLog("\(error)")
-                    return nil
-                }
+                try jsonDecoder.decode([Gist].self, from: object as! Data)
             }
             
-            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
-                
-                do {
+            public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
 
-                    return try decodeValue(object) as GistError
-                }
-                catch {
+                guard urlResponse.statusCode == 200 else {
                     
-                    return error
+                    throw try jsonDecoder.decode(GistError.self, from: object as! Data)
                 }
+                    
+                return object
             }
 		}
 		
 		public struct CreateGist : GistsRequest, RequestWithAuthentication {
 		
-			public let method:HTTPMethod = .POST
-			public let acceptableStatusCodes:Set<Int> = [ 201 ]
-			public let path:String = ""
+			public let method: HTTPMethod = .post
+			public let path: String = ""
 			
-			public var files:[GistFile]
-			public var description:String
-			public var publicGist:Bool
+			public var files: [GistFile]
+			public var description: String
+			public var publicGist: Bool
 			
-			public var authorization:GitHubAuthorization
+			public var authorization: GitHubAuthorization
 			
-			public init(authorization:GitHubAuthorization, files:[GistFile], description:String, publicGist:Bool) {
+			public init(authorization: GitHubAuthorization, files: [GistFile], description: String, publicGist: Bool) {
 				
 				self.authorization = authorization
 				self.files = files
@@ -112,44 +103,34 @@ extension GitHubAPI {
 				self.publicGist = publicGist
 			}
 			
-			public init(authorization:GitHubAuthorization, files:[GistFile], description:String) {
+			public init(authorization: GitHubAuthorization, files: [GistFile], description: String) {
 				
 				self.init(authorization: authorization, files: files, description: description, publicGist: false)
 			}
 			
-			public var parameters:[String:AnyObject] {
+			public var parameters: Dictionary<String, Any> {
 				
 				return [
 					
-					"description" : self.description,
-					"public" : toJSONBool(self.publicGist),
-					"files" : self.files.toJSONObject()
+					"description" : description,
+                    "public" : publicGist.toJSON(),
+					"files" : files.toJSON()
 				]
 			}
 
-			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> GistCreated? {
+			public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> GistCreated {
 				
-                do {
-
-                    return try decodeValue(object) as GistCreated
-                }
-                catch {
-                    
-                    NSLog("\(error)")
-                    return nil
-                }
+                try jsonDecoder.decode(GistCreated.self, from: object as! Data)
 			}
             
-            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
-                
-                do {
+            public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
 
-                    return try decodeValue(object) as GistError
-                }
-                catch {
+                guard urlResponse.statusCode == 201 else {
                     
-                    return error
+                    throw try jsonDecoder.decode(GistError.self, from: object as! Data)
                 }
+                    
+                return object
             }
 		}
 	}

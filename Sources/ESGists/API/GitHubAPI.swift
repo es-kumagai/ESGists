@@ -11,7 +11,7 @@ import Foundation
 
 public protocol Authorization {
 	
-	var value:String { get }
+	var value: String { get }
 }
 
 public protocol GitHubRequest : Request {
@@ -22,7 +22,7 @@ public protocol RequestWithAuthentication : Request {
 
 	associatedtype Auth : Authorization
 
-	var authorization:Auth { get }
+	var authorization: Auth { get }
 }
 
 extension GitHubRequest {
@@ -31,6 +31,19 @@ extension GitHubRequest {
 		
         return Foundation.URL(string: "https://api.github.com")!
 	}
+    
+    public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
+
+        guard urlResponse.statusCode == 200 else {
+            
+            let decoder = JSONDecoder()
+            let error = try decoder.decode(GistError.self, from: object as! Data)
+            
+            throw error
+        }
+            
+        return object
+    }
 }
 
 extension RequestWithAuthentication {
@@ -54,18 +67,18 @@ public enum GitHubAuthorization : Authorization {
 	
 	public init(id:String, password:String) {
 		
-		let data = "\(id):\(password)".dataUsingEncoding(NSASCIIStringEncoding)!
-		let value = data.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+        let data = "\(id):\(password)".data(using: .ascii)!
+        let value = data.base64EncodedString(options: .lineLength64Characters)
 		
-		self = .Basic(value)
+		self = .basic(value)
 	}
 	
-	public init(token:String) {
+	public init(token: String) {
 		
-		self = .Token(token)
+		self = .token(token)
 	}
 	
-	public var value:String {
+	public var value: String {
 		
 		switch self {
 			
@@ -77,7 +90,7 @@ public enum GitHubAuthorization : Authorization {
 		}
 	}
 	
-	public var token:String? {
+	public var token: String? {
 		
 		guard case .token(let value) = self else {
 			
@@ -87,7 +100,7 @@ public enum GitHubAuthorization : Authorization {
 		return value
 	}
 	
-	public var basic:String? {
+	public var basic: String? {
 		
 		guard case .basic(let value) = self else {
 			

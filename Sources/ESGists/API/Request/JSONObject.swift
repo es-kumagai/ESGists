@@ -6,12 +6,50 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public protocol JSONObjectConvertible {
-	
-	func toJSONObject() -> [String:AnyObject]
+public protocol JSONValueConvertible {
+
+    associatedtype JSONValueType
+    
+    func toJSON() -> JSONValueType
 }
 
-public func toJSONBool(value:Bool) -> String {
+public protocol JSONObjectConvertible : JSONValueConvertible {
 	
-	return value ? "true" : "false"
+	func toJSON() -> Dictionary<String, Any>
+}
+
+extension String : JSONValueConvertible {
+
+    public func toJSON() -> String {
+        
+        self
+    }
+}
+
+extension Bool : JSONValueConvertible {
+
+    public func toJSON() -> String {
+        
+        return self ? "true" : "false"
+    }
+}
+
+extension Sequence where Element : JSONValueConvertible {
+    
+    public func toJSON() -> Array<Any> {
+        
+        map { $0.toJSON() }
+    }
+}
+
+extension Sequence where Element : JSONObjectConvertible {
+    
+    public func toJSON() -> Dictionary<String, Any> {
+        
+        map { $0.toJSON() }
+            .reduce(into: [:]) { result, item in
+                
+                result.merge(item) { _, new in new }
+        }
+    }
 }
