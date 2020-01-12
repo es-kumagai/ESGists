@@ -7,7 +7,6 @@
 //
 
 import APIKit
-import Himotoki
 
 /*!
 Gists API
@@ -36,7 +35,7 @@ extension GitHubAPI {
 			public let acceptableStatusCodes:Set<Int> = [ 200 ]
 			
 			public var username:String
-			public var since:Date?
+			public var since:ISO8601Date?
 
 			public var path:String {
 				
@@ -61,7 +60,7 @@ extension GitHubAPI {
 				self.since = nil
 			}
 			
-			public init(username:String, since:Date) {
+			public init(username:String, since:ISO8601Date) {
 
 				self.username = username
 				self.since = since

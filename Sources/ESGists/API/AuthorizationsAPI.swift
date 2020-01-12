@@ -7,7 +7,6 @@
 //
 
 import APIKit
-import Himotoki
 
 /*!
 OAuth Authorizations API
@@ -32,12 +31,12 @@ extension GitHubAPI {
 		
 		public enum Option {
 			
-			case Scopes(Set<Scope>)
-			case NoteUrl(URL)
-			case ClientId(String)
-			case ClientSecret(String)
-			case Fingerprint(String)
-			case Note(String)
+			case scopes(Set<Scope>)
+			case noteUrl(URL)
+			case clientId(String)
+			case clientSecret(String)
+			case fingerprint(String)
+			case note(String)
 		}
 		
 		public struct ListYourAuthorizations : OAuthAuthorizationsRequest {
@@ -304,22 +303,22 @@ extension GitHubAPI.OAuthAuthorizations.Option : JSONObjectConvertible {
 		
 		switch self {
 			
-		case .Scopes(let scopes):
+		case .scopes(let scopes):
 			return scopes.count == 0 ? [:] : [ "scopes" : scopes.map { $0.rawValue } ]
 			
-		case .Note(let note):
+		case .note(let note):
 			return [ "note" : note ]
 			
-		case .NoteUrl(let url):
+		case .noteUrl(let url):
 			return [ "note_url" : String(url) ]
 			
-		case .ClientId(let id):
+		case .clientId(let id):
 			return [ "client_id" : id ]
 			
-		case .ClientSecret(let secret):
+		case .clientSecret(let secret):
 			return [ "client_secret" : secret ]
 			
-		case .Fingerprint(let fingerprint):
+		case .fingerprint(let fingerprint):
 			return [ "fingerprint" : fingerprint ]
 		}
 	}
@@ -329,7 +328,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 
 	public var scopes:Set<Scope>? {
 		
-		guard case .Scopes(let value) = self else {
+		guard case .scopes(let value) = self else {
 			
 			return nil
 		}
@@ -339,7 +338,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 	
 	public var noteUrl:URL? {
 		
-		guard case .NoteUrl(let value) = self else {
+		guard case .noteUrl(let value) = self else {
 			
 			return nil
 		}
@@ -349,7 +348,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 	
 	public var clientId:String? {
 		
-		guard case .ClientId(let value) = self else {
+		guard case .clientId(let value) = self else {
 			
 			return nil
 		}
@@ -359,7 +358,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 	
 	public var clientSecret:String? {
 		
-		guard case .ClientSecret(let value) = self else {
+		guard case .clientSecret(let value) = self else {
 			
 			return nil
 		}
@@ -369,7 +368,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 	
 	public var fingerprint:String? {
 		
-		guard case .Fingerprint(let value) = self else {
+		guard case .fingerprint(let value) = self else {
 			
 			return nil
 		}
@@ -382,22 +381,22 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 		
 		switch self {
 			
-		case .Scopes:
+		case .scopes:
 			return 1
 			
-		case .Note:
+		case .note:
 			return 2
 			
-		case .NoteUrl:
+		case .noteUrl:
 			return 3
 			
-		case .ClientId:
+		case .clientId:
 			return 4
 			
-		case .ClientSecret:
+		case .clientSecret:
 			return 5
 			
-		case .Fingerprint:
+		case .fingerprint:
 			return 6
 		}
 	}

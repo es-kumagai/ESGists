@@ -33,11 +33,11 @@ class AuthenticatedUserViewController: UsersViewController {
 			
 			switch response {
 				
-			case .Success(let user):
+			case .success(let user):
 				
 				self.user = user
 				
-			case .Failure(let error):
+			case .failure(let error):
 				
 				self.user = nil
 				self.showErrorAlert("Failed to get user", error: error)

@@ -32,12 +32,12 @@ class CreateGistViewController: UIViewController {
 			
 			switch response {
 				
-			case .Success(let gist):
+			case .success(let gist):
 				
 				self.clear()
 				self.showAlert("A Gist created successfully", message: String(gist))
 				
-			case .Failure(let error):
+			case .failure(let error):
 				
 				self.showErrorAlert("Failed to post a gist", error: error)
 			}

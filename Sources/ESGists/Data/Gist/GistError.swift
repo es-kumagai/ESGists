@@ -6,9 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-import Himotoki
-
-public struct GistError {
+public struct GistError : Error {
     
     public var message:String
     public var documentationUrl:String
@@ -16,31 +14,24 @@ public struct GistError {
 
 extension GistError : Decodable {
     
-    public static func decode(e: Extractor) throws -> GistError {
+    public enum CodingKeys : String, CodingKey {
         
-        return try GistError(
-            
-            message: e.value("message"),
-            documentationUrl: e.value("documentation_url")
-        )
+        case message
+        case documentationUrl = "documentation_url"
     }
-}
-
-extension GistError : ErrorType {
-    
 }
 
 extension GistError : CustomStringConvertible {
     
-    public var description:String {
+    public var description: String {
         
-        return self.message
+        return message
     }
 }
 
 extension GistError : CustomDebugStringConvertible {
     
-    public var debugDescription:String {
+    public var debugDescription: String {
         
         return "\(self.message), \(self.documentationUrl)"
     }

@@ -14,11 +14,11 @@ public protocol Authorization {
 	var value:String { get }
 }
 
-public protocol GitHubRequest : RequestType {
+public protocol GitHubRequest : Request {
 	
 }
 
-public protocol RequestWithAuthentication : RequestType {
+public protocol RequestWithAuthentication : Request {
 
 	associatedtype Auth : Authorization
 
@@ -27,9 +27,9 @@ public protocol RequestWithAuthentication : RequestType {
 
 extension GitHubRequest {
 	
-	public var baseURL:NSURL {
+    public var baseURL: Foundation.URL {
 		
-		return NSURL(string: "https://api.github.com")!
+        return Foundation.URL(string: "https://api.github.com")!
 	}
 }
 
@@ -49,8 +49,8 @@ public final class GitHubAPI : Session {
 
 public enum GitHubAuthorization : Authorization {
 
-	case Basic(String)
-	case Token(String)
+	case basic(String)
+	case token(String)
 	
 	public init(id:String, password:String) {
 		
@@ -69,17 +69,17 @@ public enum GitHubAuthorization : Authorization {
 		
 		switch self {
 			
-		case .Basic(let value):
+		case .basic(let value):
 			return "Basic \(value)"
 			
-		case .Token(let value):
+		case .token(let value):
 			return "Token \(value)"
 		}
 	}
 	
 	public var token:String? {
 		
-		guard case .Token(let value) = self else {
+		guard case .token(let value) = self else {
 			
 			return nil
 		}
@@ -89,7 +89,7 @@ public enum GitHubAuthorization : Authorization {
 	
 	public var basic:String? {
 		
-		guard case .Basic(let value) = self else {
+		guard case .basic(let value) = self else {
 			
 			return nil
 		}

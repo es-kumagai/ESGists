@@ -53,11 +53,11 @@ class ListUsersGistsViewController: UIViewController {
 			
 			switch response {
 				
-			case .Success(let list):
+			case .success(let list):
 				
 				self.gists = list
 				
-			case .Failure(let error):
+			case .failure(let error):
 				
 				self.gists = nil
 				self.showErrorAlert("Failed to get gists", error: error)

@@ -8,53 +8,43 @@
 
 import Swim
 
-public enum PopularLanguage : String {
+public enum PopularLanguage : String, CaseIterable {
 	
-	case ActionScript
-	case C
-	case CSharp = "C#"
-	case CPlusPlus = "C++"
-	case Clojure
-	case CoffeeScript
-	case CSS
-	case Go
-	case Haskell
-	case HTML
-	case Java
-	case JavaScript
-	case Lua
-	case Matlab
-	case Objective_C = "Objective-C"
-	case Perl
-	case PHP
-	case Python
-	case R
-	case Ruby
-	case Scala
-	case Shell
-	case Swift
-	case TeX
-	case VimL
+	case actionScript
+	case c
+	case cSharp = "C#"
+	case cPlusPlus = "C++"
+	case clojure
+	case coffeeScript
+	case cSS
+	case go
+	case haskell
+	case hTML
+	case java
+	case javaScript
+	case lua
+	case matlab
+	case objective_C = "Objective-C"
+	case perl
+	case pHP
+	case python
+	case r
+	case ruby
+	case scala
+	case shell
+	case swift
+	case teX
+	case vimL
 }
 
-private let _all:Set<PopularLanguage> = flatMap(Language.all, into: Set<PopularLanguage>.init) {
- 
-	PopularLanguage(rawValue: $0.rawValue)
-}
-
-extension PopularLanguage : LanguageType {
+extension PopularLanguage: LanguageType {
 	
-	public static var all:Set<PopularLanguage> {
+	public var extname: String {
 	
-		return _all
+		return language.extname
 	}
 	
-	public var extname:String {
-	
-		return self.language.extname
-	}
-	
-	public var language:Language {
+	public var language: Language {
 		
 		guard let language = Language(rawValue: self.rawValue) else {
 			

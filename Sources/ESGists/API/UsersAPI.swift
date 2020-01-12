@@ -6,23 +6,23 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
+import Foundation
 import APIKit
-import Himotoki
 
 /*!
 Users API
 https://developer.github.com/v3/users/
 */
 
-public protocol UsersRequest : RequestType {
+public protocol UsersRequest : Request {
 	
 }
 
 extension UsersRequest {
 	
-	public var baseURL:NSURL {
+    public var baseURL: Foundation.URL {
 		
-		return NSURL(string: "https://api.github.com/user")!
+        return Foundation.URL(string: "https://api.github.com/user")!
 	}
 }
 
@@ -30,9 +30,9 @@ extension GitHubAPI {
 	
 	public class Users : Session {
 		
-		public struct GetSingleUser : GitHubRequest {
-			
-			public let method:HTTPMethod = .GET
+        public struct GetSingleUser : GitHubRequest {
+
+			public let method: HTTPMethod = .get
 			public let acceptableStatusCodes:Set<Int> = [ 200 ]
 			
 			public var username:String
@@ -47,35 +47,24 @@ extension GitHubAPI {
 				self.username = username
 			}
 			
-			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> GistUser? {
-				
-                do {
+            public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Gist.User? {
 
-                    return try decodeValue(object) as GistUser
-                }
-                catch {
-                    
-                    NSLog("\(error)")
-                    return nil
-                }
+                let decoder = JSONDecoder()
+                
+                return try decoder.decode(Gist.User.self, from: object as! Data)
 			}
             
-            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
-                
-                do {
+            public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> GistError {
 
-                    return try decodeValue(object) as GistError
-                }
-                catch {
-                    
-                    return error
-                }
+                let decoder = JSONDecoder()
+                
+                return try decoder.decode(GistError.self, from: object as! Data)
             }
 		}
 		
 		public struct GetAuthenticatedUser : UsersRequest, RequestWithAuthentication {
 			
-			public let method:HTTPMethod = .GET
+			public let method:HTTPMethod = .get
 			public let acceptableStatusCodes:Set<Int> = [ 200 ]
 			public let path:String = ""
 			
@@ -86,29 +75,24 @@ extension GitHubAPI {
 				self.authorization = authorization
 			}
 			
-			public func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> GistUser? {
-				
-                do {
+            public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Gist.User? {
 
-                    return try decodeValue(object) as GistUser
-                }
-                catch {
-                    
-                    NSLog("\(error)")
-                    return nil
-                }
+                let decoder = JSONDecoder()
+                
+                return try decoder.decode(Gist.User.self, from: object as! Data)
 			}
             
-            public func errorFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> ErrorType? {
+            public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
                 
-                do {
-
-                    return try decodeValue(object) as GistError
-                }
-                catch {
+                guard 200 ..< 300 ~= urlResponse.statusCode else {
                     
-                    return error
+                    let decoder = JSONDecoder()
+                    let error = try decoder.decode(GistError.self, from: object as! Data)
+                    
+                    throw error
                 }
+                    
+                return object
             }
 		}
 	}

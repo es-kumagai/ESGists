@@ -61,28 +61,28 @@ extension APIError : CustomDebugStringConvertible {
 		
 		switch self {
 			
-		case ConnectionError(let error):
+		case connectionError(let error):
 			return error.localizedDescription
 			
-		case InvalidBaseURL(let url):
+		case invalidBaseURL(let url):
 			return "Invalid base URL (\(url))"
 			
-		case ConfigurationError(let error):
+		case configurationError(let error):
 			return "Configuration error (\(error))"
 			
-		case RequestBodySerializationError(let error):
+		case requestBodySerializationError(let error):
 			return "Request body serialization error (\(error))"
 			
-		case UnacceptableStatusCode(let code, let error):
+		case unacceptableStatusCode(let code, let error):
 			return "Unacceptable status code \(code) (\(error))"
 			
-		case ResponseBodyDeserializationError(let error):
+		case responseBodyDeserializationError(let error):
 			return "Response body deserialization error (\(error))"
 			
-		case InvalidResponseStructure(let object):
+		case invalidResponseStructure(let object):
 			return "Invalid response structure (\(object))"
 			
-		case NotHTTPURLResponse(let response):
+		case notHTTPURLResponse(let response):
 			return "Not HTTP URL Response (\(response))"
 		}
 	}

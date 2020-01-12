@@ -30,11 +30,11 @@ class CreateNewAuthorizationViewController: UIViewController {
 				
 				switch response {
 					
-				case .Success(let authorized):
+				case .success(let authorized):
 					
 					self.showAlert("authorization get successfully", message: String(authorized))
 					
-				case .Failure(let error):
+				case .failure(let error):
 					
 					self.showErrorAlert("Failed to get authorization", error: error)
 				}
@@ -56,11 +56,11 @@ class CreateNewAuthorizationViewController: UIViewController {
 				
 				switch response {
 					
-				case .Success:
+				case .success:
 					
 					self.showAlert("Delete successfully", message: String(id))
 					
-				case .Failure(let error):
+				case .failure(let error):
 					
 					self.showErrorAlert("Failed to delete authorization", error: error)
 				}
@@ -98,12 +98,12 @@ class CreateNewAuthorizationViewController: UIViewController {
 				
 				switch response {
 					
-				case .Success(let authorized):
+				case .success(let authorized):
 					
 					self.lastID = authorized.authorization.id
 					self.showAlert("Authorization successfully", message: String(authorized))
 					
-				case .Failure(let error):
+				case .failure(let error):
 					
 					self.showErrorAlert("Failed to authorization", error: error)
 				}
@@ -120,12 +120,12 @@ class CreateNewAuthorizationViewController: UIViewController {
 				
 				switch response {
 					
-				case .Success(let authorized):
+				case .success(let authorized):
 					
 					self.lastID = authorized.id
 					self.showAlert("Authorization successfully", message: String(authorized))
 					
-				case .Failure(let error):
+				case .failure(let error):
 					
 					self.showErrorAlert("Failed to authorization", error: error)
 				}

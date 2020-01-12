@@ -6,63 +6,62 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public protocol LanguageType : RawRepresentable, CustomStringConvertible, Hashable {
+public protocol LanguageType : CaseIterable, Hashable, RawRepresentable, CustomStringConvertible {
 	
-	var extname:String { get }
-	var language:Language { get }
-	
-	static var all:Set<Self> { get }
+	var extname: String { get }
+	var language: Language { get }
+}
+
+extension LanguageType {
+    
+    public var hashValue:Int {
+        
+        description.hashValue
+    }
+}
+
+extension LanguageType {
+    
+    public init?(displayText: String) {
+        
+        guard let found = Self.allCases.first(where: { $0.description == displayText }) else {
+            
+            return nil
+        }
+        
+        self = found
+    }
 }
 
 extension LanguageType {
 	
-	public var description:RawValue {
+	public var description: RawValue {
 		
-		return self.rawValue
-	}
-	
-	public var hashValue:Int {
-		
-		return self.description.hashValue
-	}
-	
-	public init?(displayText:String) {
-		
-		guard let found = Self.all.findElement({ $0.description == displayText }) else {
-			
-			return nil
-		}
-		
-		self = found.element
+		rawValue
 	}
 }
 
-extension SequenceType where Generator.Element : LanguageType {
+extension Sequence where Element : LanguageType {
 	
-	public var languages:[Language] {
+	public var languages: [Language] {
 	
-		return self.map(Language.init)
+		map(Language.init)
 	}
 	
-	public func toLanguages() -> [Language] {
-		
-		return self.languages
-	}
-	
-	@warn_unused_result
-	public func sort() -> [Generator.Element] {
+	@discardableResult
+	public func sort() -> [Element] {
 
-		return self.sort {
+		sorted {
 			
-			$0.description.lowercaseString < $1.description.lowercaseString
+			$0.description.lowercased() < $1.description.lowercased()
 		}
 	}
 }
 
 extension Set where Element : LanguageType {
 	
-	public var languages:Set<Language> {
+	public var languages: Set<Language> {
 		
-		return Set<Language>(self.map(Language.init))
+		Set<Language>(map(Language.init))
 	}
 }
