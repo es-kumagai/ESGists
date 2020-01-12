@@ -2,5 +2,8 @@
 xcuserdata
 *.xcuserdatad
 .build/
-*.xcodeproj
-Package.resolved
+/Package.resolved
+/.build
+/Packages
+/*.xcodeproj
+
