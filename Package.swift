@@ -32,5 +32,4 @@ let package = Package(
             dependencies: ["ESGists"]),
     ],
     swiftLanguageVersions: [.v5]
-
 )
