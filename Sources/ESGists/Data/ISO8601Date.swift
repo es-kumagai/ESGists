@@ -58,6 +58,40 @@ extension ISO8601Date : CustomStringConvertible {
     }
 }
 
+extension ISO8601Date : Comparable {
+    
+    public static func ==(lhs: ISO8601Date, rhs: ISO8601Date) -> Bool {
+        
+        lhs.rawValue == rhs.rawValue
+    }
+
+    public static func !=(lhs: ISO8601Date, rhs: ISO8601Date) -> Bool {
+        
+        lhs.rawValue != rhs.rawValue
+    }
+
+    public static func <(lhs: ISO8601Date, rhs: ISO8601Date) -> Bool {
+        
+        lhs.rawValue < rhs.rawValue
+    }
+
+    public static func >(lhs: ISO8601Date, rhs: ISO8601Date) -> Bool {
+        
+        lhs.rawValue > rhs.rawValue
+    }
+
+    public static func <=(lhs: ISO8601Date, rhs: ISO8601Date) -> Bool {
+        
+        lhs.rawValue <= rhs.rawValue
+    }
+
+    public static func >=(lhs: ISO8601Date, rhs: ISO8601Date) -> Bool {
+        
+        lhs.rawValue >= rhs.rawValue
+    }
+
+}
+
 private extension ISO8601Date {
     
     static let iso8601DateFormatter = ISO8601DateFormatter()
