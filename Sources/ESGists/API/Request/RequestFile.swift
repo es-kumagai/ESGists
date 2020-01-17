@@ -10,6 +10,12 @@ public struct GistFile : Codable {
 	
 	public var name: String
 	public var content: Array<String>
+    
+    public init(name: String, content: Array<String>) {
+        
+        self.name = name
+        self.content = content
+    }
 }
 
 extension GistFile : JSONObjectConvertible {
