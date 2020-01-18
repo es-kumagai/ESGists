@@ -10,31 +10,31 @@ import Swim
 
 public enum PopularLanguage : String, CaseIterable {
 	
-	case actionScript
-	case c
+	case actionScript = "Action Script"
+	case c = "C"
 	case cSharp = "C#"
 	case cPlusPlus = "C++"
-	case clojure
-	case coffeeScript
-	case cSS
-	case go
-	case haskell
-	case hTML
-	case java
-	case javaScript
-	case lua
-	case matlab
+	case clojure = "Clojure"
+	case coffeeScript = "CoffeeScript"
+	case css = "CSS"
+	case go = "Go"
+	case haskell = "Haskell"
+	case html = "HTML"
+	case java = "Java"
+	case javaScript = "JavaScript"
+	case lua = "Lua"
+	case matlab = "Matlab"
 	case objective_C = "Objective-C"
-	case perl
-	case pHP
-	case python
-	case r
-	case ruby
-	case scala
-	case shell
-	case swift
-	case teX
-	case vimL
+	case perl = "Perl"
+	case php = "PHP"
+	case python = "Python"
+	case r = "R"
+	case ruby = "Ruby"
+	case scala = "Scala"
+	case shell = "Shell"
+	case swift = "Swift"
+	case teX = "TeX"
+	case vimL = "VimL"
 }
 
 extension PopularLanguage: LanguageType {
