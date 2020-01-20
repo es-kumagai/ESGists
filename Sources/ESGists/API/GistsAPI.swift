@@ -70,14 +70,16 @@ extension GitHubAPI {
 			
 			public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [Gist] {
 				
-                try jsonDecoder.decode([Gist].self, from: object as! Data)
+                let data = try JSONSerialization.data(withJSONObject: object, options: [])
+                return try jsonDecoder.decode([Gist].self, from: data)
             }
             
             public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
 
                 guard urlResponse.statusCode == 200 else {
                     
-                    throw try jsonDecoder.decode(GistError.self, from: object as! Data)
+                    let data = try JSONSerialization.data(withJSONObject: object, options: [])
+                    throw try jsonDecoder.decode(GistError.self, from: data)
                 }
                     
                 return object
@@ -120,14 +122,16 @@ extension GitHubAPI {
 
 			public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> GistCreated {
 				
-                try jsonDecoder.decode(GistCreated.self, from: object as! Data)
+                let data = try JSONSerialization.data(withJSONObject: object, options: [])
+                return try jsonDecoder.decode(GistCreated.self, from: data)
 			}
             
             public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
 
                 guard urlResponse.statusCode == 201 else {
                     
-                    throw try jsonDecoder.decode(GistError.self, from: object as! Data)
+                    let data = try JSONSerialization.data(withJSONObject: object, options: [])
+                    throw try jsonDecoder.decode(GistError.self, from: data)
                 }
                     
                 return object

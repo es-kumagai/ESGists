@@ -62,8 +62,9 @@ extension GitHubAPI {
             public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Gist.User {
 
                 let decoder = JSONDecoder()
+                let data = try JSONSerialization.data(withJSONObject: object, options: [])
                 
-                return try decoder.decode(Gist.User.self, from: object as! Data)
+                return try decoder.decode(Gist.User.self, from: data)
 			}
 		}
 		
@@ -82,8 +83,9 @@ extension GitHubAPI {
             public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Gist.User {
 
                 let decoder = JSONDecoder()
+                let data = try JSONSerialization.data(withJSONObject: object, options: [])
                 
-                return try decoder.decode(Gist.User.self, from: object as! Data)
+                return try decoder.decode(Gist.User.self, from: data)
 			}
 		}
 	}
