@@ -48,12 +48,14 @@ extension GitHubRequest {
 
 extension RequestWithAuthentication {
 	
-	public func configureURLRequest(URLRequest: NSMutableURLRequest) throws -> NSMutableURLRequest {
-		
-		URLRequest.setValue(self.authorization.value, forHTTPHeaderField: "Authorization")
-		
-		return URLRequest
-	}
+    public func intercept(urlRequest: URLRequest) throws -> URLRequest {
+
+        var urlRequest = urlRequest
+        
+        urlRequest.setValue(self.authorization.value, forHTTPHeaderField: "Authorization")
+        
+        return urlRequest
+    }
 }
 
 public final class GitHubAPI : Session {
