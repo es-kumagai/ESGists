@@ -30,7 +30,8 @@ extension UsersRequest {
         guard urlResponse.statusCode == 200 else {
             
             let decoder = JSONDecoder()
-            let error = try decoder.decode(GistError.self, from: object as! Data)
+            let data = try JSONSerialization.data(withJSONObject: object, options: [])
+            let error = try decoder.decode(GistError.self, from: data)
             
             throw error
         }
