@@ -44,16 +44,20 @@ extension GitHubAPI {
 				return "/users/\(self.username)/gists"
 			}
 			
-			public var parameters: Dictionary<String, Any> {
+			public var bodyParameters: BodyParameters? {
 				
-				if let since = self.since {
+                let parameters: [String : Any]
+                
+                switch since {
 					
-					return [ "since" : since.iso8601String ]
+                case .some(let date):
+					parameters = [ "since" : date.iso8601String ]
+
+                case .none:
+					parameters = [:]
 				}
-				else {
-					
-					return [:]
-				}
+                
+                return JSONBodyParameters(JSONObject: parameters)
 			}
 			
 			public init(username: String) {
@@ -110,15 +114,17 @@ extension GitHubAPI {
 				self.init(authorization: authorization, files: files, description: description, publicGist: false)
 			}
 			
-			public var parameters: Dictionary<String, Any> {
-				
-				return [
-					
-					"description" : description,
+            public var bodyParameters: BodyParameters? {
+            
+                let parameters: [String : Any] = [
+                    
+                    "description" : description,
                     "public" : publicGist.toJSON(),
-					"files" : files.toJSON()
-				]
-			}
+                    "files" : files.toJSON()
+                    ]
+                
+                return JSONBodyParameters(JSONObject: parameters)
+            }
 
 			public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> GistCreated {
 				

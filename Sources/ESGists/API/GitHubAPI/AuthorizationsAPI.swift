@@ -109,18 +109,18 @@ extension GitHubAPI {
 			public var note: String
 			public var options: Set<OAuthAuthorizations.Option>
 			
-			public var parameters: Dictionary<String, Any> {
+			public var bodyParameters: BodyParameters? {
 			
-				var result = options.toJSON()
+				var parameters = options.toJSON()
 				
-				result["note"] = note
+				parameters["note"] = note
 
 				#if DEBUG
-                let data = try! NSString(data: JSONSerialization.data(withJSONObject: result, options: JSONSerialization.WritingOptions.prettyPrinted), encoding: String.Encoding.utf8.rawValue)!
+                let data = try! NSString(data: JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted), encoding: String.Encoding.utf8.rawValue)!
 				NSLog("Parameters = \(data)")
 				#endif
 				
-				return result
+				return JSONBodyParameters(JSONObject: parameters)
 			}
 			
 			public init(authorization:GitHubAuthorization, note:String) {
@@ -169,19 +169,19 @@ extension GitHubAPI {
 				return "/clients/\(self.clientId)"
 			}
 			
-			public var parameters: Dictionary<String, Any> {
+			public var bodyParameters: BodyParameters? {
 				
-                var result = options.toJSON()
+                var parameters = options.toJSON()
 				
-				result["client_id"] = nil
-				result["client_secret"] = self.clientSecret
+				parameters["client_id"] = nil
+				parameters["client_secret"] = self.clientSecret
 				
 				#if DEBUG
-                let data = try! NSString(data:JSONSerialization.data(withJSONObject: result, options: JSONSerialization.WritingOptions.prettyPrinted), encoding:String.Encoding.utf8.rawValue)!
+                let data = try! NSString(data:JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted), encoding:String.Encoding.utf8.rawValue)!
 					NSLog("Parameters = \(data)")
 				#endif
 				
-				return result
+				return JSONBodyParameters(JSONObject: parameters)
 			}
 			
 			public init(authorization:GitHubAuthorization, clientId:String, clientSecret:String) {
