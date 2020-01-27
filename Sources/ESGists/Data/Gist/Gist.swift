@@ -8,12 +8,14 @@
 
 public struct Gist : Decodable {
 
+    public typealias File = [Filename : FileInfo]
+    
 	public var id: String
 	public var description: String
 	public var isPublic: Bool
 	public var owner: User?
 	public var user: String?
-	public var files: [Filename: FileInfo]
+	public var files: [File]
 	public var commentCount: Int
     
 	public var urls: URLs
@@ -51,7 +53,7 @@ public struct Gist : Decodable {
         isPublic = try container.decode(Bool.self, forKey: .isPublic)
         owner = try container.decode(Gist.User?.self, forKey: .owner)
         user = try container.decode(String?.self, forKey: .user)
-        files = try container.decode([Filename: FileInfo].self, forKey: .files)
+        files = try container.decode([File].self, forKey: .files)
         commentCount = try container.decode(Int.self, forKey: .commentCount)
         
         urls = try URLs(from: decoder)

@@ -22,13 +22,6 @@ extension Gist {
             
             rawValue = try container.decode(String.self)
         }
-        
-        public func encode(to encoder: Encoder) throws {
-            
-            var container = encoder.singleValueContainer()
-            
-            try container.encode(rawValue)
-        }
     }
 }
 
