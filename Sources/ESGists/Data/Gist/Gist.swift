@@ -8,7 +8,7 @@
 
 public struct Gist : Decodable {
 
-    public typealias Files = [Filename : FileInfo]
+    public typealias Files = [String : FileInfo]
     
 	public var id: String
 	public var description: String
