@@ -9,9 +9,9 @@
 public struct GistFile : Codable {
 	
 	public var name: String
-	public var content: Array<String>
+	public var content: String
     
-    public init(name: String, content: Array<String>) {
+    public init(name: String, content: String) {
         
         self.name = name
         self.content = content
@@ -22,6 +22,6 @@ extension GistFile : JSONObjectConvertible {
     
     public func toJSON() -> Dictionary<String, Any> {
         
-        [ name : content.toJSON() ]
+        [ name : ["content" : content ]]
     }
 }
