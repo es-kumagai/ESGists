@@ -7,7 +7,7 @@
 
 extension Gist {
     
-    public struct URLs : Codable {
+    public struct URLs : Decodable {
         
         public var url: URL
         public var forksUrl: URL

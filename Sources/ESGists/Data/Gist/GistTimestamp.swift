@@ -7,7 +7,7 @@
 
 extension Gist {
     
-    public struct Timestamp : Codable {
+    public struct Timestamp : Decodable {
         
         public var createdAt: ISO8601Date
         public var updatedAt: ISO8601Date

@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct Gist : Codable {
+public struct Gist : Decodable {
 
 	public var id: String
 	public var description: String
@@ -56,21 +56,5 @@ public struct Gist : Codable {
         
         urls = try URLs(from: decoder)
         timestamp = try Timestamp(from: decoder)
-    }
-    
-    public func encode(to encoder: Encoder) throws {
-        
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        
-        try container.encode(id, forKey: .id)
-        try container.encode(description, forKey: .description)
-        try container.encode(isPublic, forKey: .isPublic)
-        try container.encode(owner, forKey: .owner)
-        try container.encode(user, forKey: .user)
-        try container.encode(files, forKey: .files)
-        try container.encode(commentCount, forKey: .commentCount)
-        
-        try urls.encode(to: encoder)
-        try timestamp.encode(to: encoder)
     }
 }

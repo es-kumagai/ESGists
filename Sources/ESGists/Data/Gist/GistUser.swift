@@ -8,7 +8,7 @@
 
 extension Gist {
     
-    public struct User: Codable {
+    public struct User: Decodable {
         
         public var login: String
         public var id: ID
@@ -55,20 +55,6 @@ extension Gist {
             isSiteAdmin = try container.decode(Bool.self, forKey: .isSiteAdmin)
             
             urls = try URLs(from: decoder)
-        }
-        
-        public func encode(to encoder: Encoder) throws {
-            
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            
-            try container.encode(login, forKey: .login)
-            try container.encode(id, forKey: .id)
-            try container.encode(nodeId, forKey: .nodeId)
-            try container.encode(gravatarId, forKey: .gravatarId)
-            try container.encode(type, forKey: .type)
-            try container.encode(isSiteAdmin, forKey: .isSiteAdmin)
-            
-            try container.encode(urls, forKey: .urls)
         }
     }
 }

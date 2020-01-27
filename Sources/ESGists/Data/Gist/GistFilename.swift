@@ -7,7 +7,7 @@
 
 extension Gist {
     
-    public struct Filename : Codable, RawRepresentable {
+    public struct Filename : Decodable, RawRepresentable {
         
         public var rawValue: String
         

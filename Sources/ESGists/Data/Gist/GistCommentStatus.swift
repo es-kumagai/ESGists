@@ -7,7 +7,7 @@
 
 extension Gist {
     
-    public struct CommentStatus : Codable {
+    public struct CommentStatus : Decodable {
         
         public var count: Int
         public var url: URL

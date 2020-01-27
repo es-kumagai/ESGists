@@ -8,7 +8,7 @@
 
 extension Gist.User {
     
-    public enum UserType : String, Codable {
+    public enum UserType : String, Decodable {
         
         case user = "User"
     }
