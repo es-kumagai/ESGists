@@ -20,7 +20,7 @@ public struct Gist : Codable {
     public var timestamp: Timestamp
 
     
-    public enum CodingKeys : String, CodingKey {
+    enum CodingKeys : String, CodingKey {
         
         case id
         case description
