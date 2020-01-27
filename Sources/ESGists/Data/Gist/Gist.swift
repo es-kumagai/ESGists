@@ -49,8 +49,8 @@ public struct Gist : Codable {
         id = try container.decode(String.self, forKey: .id)
         description = try container.decode(String.self, forKey: .description)
         isPublic = try container.decode(Bool.self, forKey: .isPublic)
-        owner = try container.decode(Gist.User.self, forKey: .owner)
-        user = try container.decode(String.self, forKey: .user)
+        owner = try container.decode(Gist.User?.self, forKey: .owner)
+        user = try container.decode(String?.self, forKey: .user)
         files = try container.decode([Filename: FileInfo].self, forKey: .files)
         commentCount = try container.decode(Int.self, forKey: .commentCount)
         
