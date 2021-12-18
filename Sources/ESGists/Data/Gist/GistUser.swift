@@ -8,7 +8,7 @@
 
 extension Gist {
     
-    public struct User: Decodable {
+    public struct User: Decodable, Sendable {
         
         public var login: String
         public var id: ID
@@ -19,7 +19,7 @@ extension Gist {
         
         public var urls: URLs
 
-        public enum CodingKeys: String, CodingKey {
+        enum CodingKeys: String, CodingKey {
             
             case login
             case id

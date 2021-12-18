@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct GistCreated {
+public struct GistCreated : Sendable {
 
 	public var gist: Gist
 	public var history: [GistHistory]

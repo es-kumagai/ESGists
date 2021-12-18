@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct ID : Codable {
+public struct ID : Codable, Sendable {
 	
 	public var value: UInt64
 	
@@ -52,7 +52,7 @@ extension ID : CustomStringConvertible {
 	
 	public var description:String {
 		
-		return "\(self.value)"
+		"\(self.value)"
 	}
 }
 
@@ -63,5 +63,5 @@ extension ID : Equatable {
 
 public func == (lhs:ID, rhs:ID) -> Bool {
 	
-	return lhs.value == rhs.value
+	lhs.value == rhs.value
 }

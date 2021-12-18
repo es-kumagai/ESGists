@@ -7,7 +7,7 @@
 //
 
 
-public struct GistHistory {
+public struct GistHistory : Sendable {
 	
     public var url: URL
 	public var version: String
@@ -28,7 +28,7 @@ extension GistHistory : Decodable {
 
 extension GistHistory {
     
-    public struct ChangeStatus : Decodable {
+    public struct ChangeStatus : Decodable, Sendable {
         
         public var total: Int
         public var deletions: Int

@@ -7,12 +7,12 @@
 
 extension Gist {
     
-    public struct Timestamp : Decodable {
+    public struct Timestamp : Decodable, Sendable {
         
         public var createdAt: ISO8601Date
         public var updatedAt: ISO8601Date
         
-        public enum CodingKeys : String, CodingKey {
+        enum CodingKeys : String, CodingKey {
             
             case createdAt = "created_at"
             case updatedAt = "updated_at"

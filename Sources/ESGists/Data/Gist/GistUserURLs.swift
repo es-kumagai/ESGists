@@ -8,7 +8,7 @@
 
 extension Gist.User {
     
-    public struct URLs : Decodable {
+    public struct URLs : Decodable, Sendable {
         
         public var avatarUrl: URL
         public var url: URL

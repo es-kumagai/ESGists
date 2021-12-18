@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public protocol LanguageType : CaseIterable, Hashable, RawRepresentable, CustomStringConvertible {
+public protocol LanguageType : CaseIterable, Hashable, Sendable, RawRepresentable, CustomStringConvertible {
 	
 	var extname: String { get }
 	var language: Language { get }
@@ -14,9 +14,10 @@ public protocol LanguageType : CaseIterable, Hashable, RawRepresentable, CustomS
 
 extension LanguageType {
     
-    public var hashValue:Int {
+    public func hash(into hasher: inout Hasher) {
         
-        description.hashValue
+        hasher.combine(extname)
+        hasher.combine(language)
     }
 }
 

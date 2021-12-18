@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct AuthorizationResponse : Decodable {
+public struct AuthorizationResponse : Decodable, Sendable {
 	
 	public var id: ID
 	public var url: URL
@@ -22,7 +22,7 @@ public struct AuthorizationResponse : Decodable {
     public var timestamp: Gist.Timestamp
 
 
-    public enum CodingKeys : String, CodingKey {
+    enum CodingKeys : String, CodingKey {
      
         case id
         case url

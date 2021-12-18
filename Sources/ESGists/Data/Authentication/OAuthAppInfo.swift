@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct OAuthAppInfo : Decodable {
+public struct OAuthAppInfo : Decodable, Sendable {
 
 	public var name: String
 	public var clientId: String

@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public enum Language : String, Codable, CaseIterable {
+public enum Language : String, Codable, CaseIterable, Sendable {
 	
 	case actionScript = "Action Script"
 	case c = "C"

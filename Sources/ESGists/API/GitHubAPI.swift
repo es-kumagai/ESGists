@@ -9,16 +9,16 @@
 import APIKit
 import Foundation
 
-public protocol Authorization {
+public protocol Authorization : Sendable {
 	
 	var value: String { get }
 }
 
-public protocol GitHubRequest : Request {
+public protocol GitHubRequest : Request, Sendable {
 	
 }
 
-public protocol RequestWithAuthentication : Request {
+public protocol RequestWithAuthentication : Request, Sendable {
 
 	associatedtype Auth : Authorization
 

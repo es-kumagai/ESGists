@@ -30,7 +30,7 @@ extension Bool : JSONValueConvertible {
 
     public func toJSON() -> String {
         
-        return self ? "true" : "false"
+        self ? "true" : "false"
     }
 }
 

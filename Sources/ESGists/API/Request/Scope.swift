@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public enum Scope : String, Decodable {
+public enum Scope : String, Decodable, Sendable {
 	
 	/// Grants read-only access to public information (includes public user profile info, public repository info, and gists)
 	case none = ""

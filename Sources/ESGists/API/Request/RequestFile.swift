@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct GistFile : Codable {
+public struct GistFile : Codable, Sendable {
 	
 	public var name: String
 	public var content: String

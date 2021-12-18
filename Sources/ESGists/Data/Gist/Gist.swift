@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct Gist : Decodable {
+public struct Gist : Decodable, Sendable {
 
     public typealias Files = [String : FileInfo]
     

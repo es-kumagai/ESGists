@@ -6,16 +6,16 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct AuthorizationResponseWithStatus {
+public struct AuthorizationResponseWithStatus : Sendable {
 	
-	public enum Status {
+    public enum Status : Sendable {
 		
 		case created
 		case alreadyExists
 	}
 	
-	public var status:Status
-	public var authorization:AuthorizationResponse
+	public var status: Status
+	public var authorization: AuthorizationResponse
 	
 	public init?(status:Int, authorization: @autoclosure () -> AuthorizationResponse) {
 		

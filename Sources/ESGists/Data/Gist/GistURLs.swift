@@ -7,7 +7,7 @@
 
 extension Gist {
     
-    public struct URLs : Decodable {
+    public struct URLs : Decodable, Sendable {
         
         public var url: URL
         public var forksUrl: URL
@@ -17,7 +17,7 @@ extension Gist {
         public var gitPullUrl: URL
         public var gitPushUrl: URL
         
-        public enum CodingKeys : String, CodingKey {
+        enum CodingKeys : String, CodingKey {
             
             case url
             case forksUrl = "forks_url"

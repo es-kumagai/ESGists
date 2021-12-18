@@ -2,8 +2,8 @@
 xcuserdata
 *.xcuserdatad
 .build/
+.swiftpm/
 /Package.resolved
 /.build
 /Packages
 /*.xcodeproj
-

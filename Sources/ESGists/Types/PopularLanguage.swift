@@ -8,7 +8,7 @@
 
 import Swim
 
-public enum PopularLanguage : String, CaseIterable {
+public enum PopularLanguage : String, CaseIterable, Sendable {
 	
 	case actionScript = "Action Script"
 	case c = "C"
@@ -41,7 +41,7 @@ extension PopularLanguage: LanguageType {
 	
 	public var extname: String {
 	
-		return language.extname
+		language.extname
 	}
 	
 	public var language: Language {

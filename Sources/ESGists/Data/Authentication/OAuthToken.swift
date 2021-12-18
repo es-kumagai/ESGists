@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-public struct OAuthToken : Decodable {
+public struct OAuthToken : Decodable, Sendable {
 	
 	public var value: String
 	

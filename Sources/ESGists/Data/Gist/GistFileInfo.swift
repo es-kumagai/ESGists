@@ -7,7 +7,7 @@
 
 extension Gist {
 
-    public struct FileInfo {
+    public struct FileInfo : Sendable {
         
         public var type: String
         public var language: String?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct URL : Codable, RawRepresentable {
+public struct URL : Codable, Sendable, RawRepresentable {
     
     public var rawValue: String
     

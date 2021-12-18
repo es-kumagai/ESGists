@@ -8,9 +8,9 @@
 
 import Foundation
 
-public struct ISO8601Date : RawRepresentable, Codable {
+public struct ISO8601Date : RawRepresentable, Codable, Sendable {
 
-    public var rawValue: Foundation.Date
+    public var timeIntervalSinceReferenceDate: TimeInterval
     
     public init?(_ string: String) {
         
@@ -19,19 +19,24 @@ public struct ISO8601Date : RawRepresentable, Codable {
             return nil
         }
         
-        rawValue = date
+        timeIntervalSinceReferenceDate = date.timeIntervalSinceReferenceDate
     }
         
     public init(_ date: Foundation.Date) {
         
-        rawValue = date
+        timeIntervalSinceReferenceDate = date.timeIntervalSinceReferenceDate
     }
 
     public init(rawValue date: Foundation.Date) {
         
-        rawValue = date
+        timeIntervalSinceReferenceDate = date.timeIntervalSinceReferenceDate
     }
 
+    public var rawValue: Date {
+    
+        Date(timeIntervalSinceReferenceDate: timeIntervalSinceReferenceDate)
+    }
+    
     public var iso8601String: String {
         
         Self.iso8601DateFormatter.string(from: rawValue)
@@ -47,6 +52,13 @@ public struct ISO8601Date : RawRepresentable, Codable {
         }
         
         self = date
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        
+        var container = encoder.singleValueContainer()
+        
+        try container.encode(iso8601String)
     }
 }
 

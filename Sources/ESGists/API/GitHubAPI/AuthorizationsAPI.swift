@@ -24,7 +24,7 @@ extension OAuthAuthorizationsRequest {
 	
     public var baseURL: Foundation.URL {
 		
-		return Foundation.URL(string: "https://api.github.com/authorizations")!
+		Foundation.URL(string: "https://api.github.com/authorizations")!
 	}
     
     public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
@@ -44,7 +44,7 @@ extension GitHubAPI {
 	
 	public class OAuthAuthorizations : Session {
 		
-        public enum Option {
+        public enum Option : Sendable {
 			
 			case scopes(Set<Scope>)
 			case noteUrl(URL)
@@ -295,7 +295,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : JSONObjectConvertible {
 
 extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 
-	public var scopes:Set<Scope>? {
+	public var scopes: Set<Scope>? {
 		
 		guard case .scopes(let value) = self else {
 			
@@ -305,7 +305,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 		return value
 	}
 	
-	public var noteUrl:URL? {
+	public var noteUrl: URL? {
 		
 		guard case .noteUrl(let value) = self else {
 			
@@ -315,7 +315,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 		return value
 	}
 	
-	public var clientId:String? {
+	public var clientId: String? {
 		
 		guard case .clientId(let value) = self else {
 			
@@ -325,7 +325,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 		return value
 	}
 	
-	public var clientSecret:String? {
+	public var clientSecret: String? {
 		
 		guard case .clientSecret(let value) = self else {
 			
@@ -335,7 +335,7 @@ extension GitHubAPI.OAuthAuthorizations.Option : Hashable {
 		return value
 	}
 	
-	public var fingerprint:String? {
+	public var fingerprint: String? {
 		
 		guard case .fingerprint(let value) = self else {
 			
