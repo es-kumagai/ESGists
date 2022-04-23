@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import APIKit
+@preconcurrency import APIKit
 
 /*!
 Users API

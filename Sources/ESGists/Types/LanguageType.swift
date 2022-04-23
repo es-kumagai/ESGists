@@ -12,14 +12,8 @@ public protocol LanguageType : CaseIterable, Hashable, Sendable, RawRepresentabl
 	var language: Language { get }
 }
 
-extension LanguageType {
-    
-    public func hash(into hasher: inout Hasher) {
-        
-        hasher.combine(extname)
-        hasher.combine(language)
-    }
-}
+public typealias Languages = Array<Language>
+public typealias LanguageSet = Set<Language>
 
 extension LanguageType {
     
@@ -44,7 +38,7 @@ extension LanguageType {
 
 extension Sequence where Element : LanguageType {
 	
-	public var languages: [Language] {
+	public var languages: Languages {
 	
 		map(Language.init)
 	}
@@ -61,8 +55,8 @@ extension Sequence where Element : LanguageType {
 
 extension Set where Element : LanguageType {
 	
-	public var languages: Set<Language> {
+	public var languages: LanguageSet {
 		
-		Set<Language>(map(Language.init))
+		LanguageSet(map(Language.init))
 	}
 }

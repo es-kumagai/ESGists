@@ -6,7 +6,7 @@
 //  Copyright © 平成27年 EasyStyle G.K. All rights reserved.
 //
 
-import APIKit
+@preconcurrency import APIKit
 import Foundation
 
 private let jsonDecoder = JSONDecoder()
