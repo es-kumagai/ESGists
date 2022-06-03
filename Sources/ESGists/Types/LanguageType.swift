@@ -44,7 +44,7 @@ extension Sequence where Element : LanguageType {
 	}
 	
 	@discardableResult
-	public func sort() -> [Element] {
+	public func sorted() -> [Element] {
 
 		sorted {
 			
